@@ -1,0 +1,90 @@
+.react-calendar {
+    width: 100%;
+    border: none;
+    font-family: Inter, sans-serif;
+    padding: 7px 0;
+}
+
+.react-calendar__navigation button {
+    color: #611C1C;
+    min-width: 44px;
+    background: none;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.react-calendar__month-view__weekdays {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #611C1C;
+}
+
+.react-calendar__month-view__days__day {
+    color: #000000;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #999999;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #611C1C;
+}
+
+.react-calendar__tile--now {
+    background: #8b0000; /* Warna merah gelap */
+    color: white;
+    border-radius: 6px;
+}
+
+.react-calendar__tile--active {
+    background: #CEABA5 !important; /* Warna merah gelap dengan prioritas tinggi */
+    color: white;
+    border-radius: 6px;
+}
+
+.react-calendar__tile {
+    height: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.react-calendar__tile--now.react-calendar__tile--active {
+    background: #8b0000 !important; /* Pastikan tanggal sekarang yang aktif tetap berwarna merah gelap */
+    color: white;
+}
+
+.react-calendar__month-view__days__day--weekend {
+    color: #d9534f; /* Warna akhir pekan merah */
+}
+
+.react-calendar__tile--now:hover {
+    background: #6b0000 !important; /* Warna merah yang lebih gelap ketika di-hover */
+    color: white !important;
+}
+
+.react-calendar__tile--now.react-calendar__tile--active:hover {
+    background: #6b0000 !important; /* Warna merah yang lebih gelap ketika di-hover dan aktif */
+    color: white !important;
+}
+
+.agenda-dot {
+    position: absolute;
+    top: 1px;
+    right: 17px;
+    width: 8px;
+    height: 8px;
+    background-color: #9D262A;
+    border-radius: 50%;
+}
+
+.react-calendar__tile {
+    position: relative;
+}    
