@@ -9,7 +9,7 @@ import Video from "../component/beranda/Video.jsx";
 
 export default function Beranda() {
   return (
-    <>
+    <div className="bg-[#F9F9FB]">
       <Navbar />
       <div className="pt-24">
         <Hero />
@@ -22,6 +22,6 @@ export default function Beranda() {
         </div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

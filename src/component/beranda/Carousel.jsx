@@ -46,13 +46,13 @@ const Carousel = () => {
       <div className="relative w-3/4 max-w-5xl mx-auto">
         <div className="flex items-center justify-center overflow-hidden py-10 pt-20">
           {getVisibleSlides().map((item, index) => (
-            <div
-              key={item.id}
-              style={{backgroundImage: `url(${item.content})`}}
-              className={`carousel-item ${
-                index === 0 ? 'prevSlide' : index === 1 ? 'activeSlide' : 'nextSlide'
-              } bg-cover bg-center flex-shrink-0 h-64 w-56 flex items-center justify-center rounded-2xl transition-all duration-500 -mx-20`}  // mx-1 for smaller margin
-            >
+            <div key={item.id}>
+              <div
+                style={{backgroundImage: `url(${item.content})`}}
+                className={`carousel-item ${
+                  index === 0 ? 'prevSlide' : index === 1 ? 'activeSlide' : 'nextSlide'
+                } bg-cover bg-center flex-shrink-0 h-64 w-56 flex items-center justify-center rounded-2xl transition-all duration-500 -mx-20`}  // mx-1 for smaller margin
+              ></div>
             </div>
           ))}
         </div>

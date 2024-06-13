@@ -1,3 +1,4 @@
+import Footer from "../component/Footer.jsx";
 import Navbar from "../component/Navbar.jsx"
 import Hero from "../component/beranda/Hero.jsx"
 
@@ -9,6 +10,7 @@ export default function Struktur() {
         <Hero />
         <h1>Ini struktur</h1>
       </div>
+      <Footer />
     </>
   );
 }
