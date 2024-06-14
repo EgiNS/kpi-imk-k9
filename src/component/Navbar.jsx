@@ -51,22 +51,9 @@ export default function NavBar() {
               </div>
             )}
           </div>
-          <div className="relative">
-            <button
-              onClick={() => toggleSubMenu(2)}
-              className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
-            >
-              Regulasi
-              <img src={openMenu === 2 ? "/img/arrow_up.svg" : "/img/arrow_down.svg"} alt="" className='inline h-4 ml-2' />
-            </button>
-            {openMenu === 2 && (
-              <div className="absolute top-full left-0 mt-2 w-40 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Undang-Undang</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Peraturan KPI</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">MoU</Link>
-              </div>
-            )}
-          </div>
+          <Link to="/regulasi" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer">
+            Regulasi
+          </Link>
           <div className="relative">
             <button
               onClick={() => toggleSubMenu(3)}

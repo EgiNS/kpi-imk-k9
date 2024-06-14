@@ -5,6 +5,7 @@ import Struktur from "./pages/Struktur";
 import Ikpstv from "./pages/publikasi/Ikpstv";
 import Login from "./pages/Login/Login";
 import Daftar from "./pages/Login/Daftar";
+import Regulasi from "./pages/regulasi/Regulasi";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/ikpstv" element={ <Ikpstv /> }/>
           <Route path="/login" element={ <Login /> }/>
           <Route path="/daftar" element={ <Daftar /> }/>
+          <Route path="/regulasi" element={ <Regulasi /> }/>
         </Routes>
       </BrowserRouter>
     </div>

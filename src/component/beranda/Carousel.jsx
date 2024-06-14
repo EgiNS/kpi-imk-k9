@@ -8,11 +8,11 @@ const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
   
     const items = [
-      { id: 1, content: 'https://kpi.go.id/images/2024/Mei/FMPP-Smg-3.jpg' },
-      { id: 2, content: 'https://kpi.go.id/images/2024/Mei/IKPSTV-Jambi-3.jpg' },
-      { id: 3, content: 'https://kpi.go.id/images/2024/Maret/Ekosistem-Digital-2.jpg' },
-      { id: 4, content: 'https://kpi.go.id/images/2024/Mei/UBB-1.JPG' },
-      { id: 5, content: 'https://kpi.go.id/images/2024/Maret/NTB-1.jpg' },
+      { id: 1, content: 'https://kpi.go.id/images/2024/Juni/Sekolah-P3SPS-1.jpg', title: "Sekolah Pedoman Perilaku Penyiaran dan Standar Program Siaran" },
+      { id: 2, content: 'https://kpi.go.id/images/2024/Mei/IKPSTV-Jambi-3.jpg', title: "Diseminasi Indeks Kualitas Program Siaran Televisi" },
+      { id: 3, content: 'https://kpi.go.id/images/2024/Maret/Ekosistem-Digital-2.jpg', title: "Seminar Pengembangan Ekosistem Penyiaran Digital" },
+      { id: 4, content: 'https://kpi.go.id/images/2024/Juni/Evaluasi-2.jpg', title: "Evaluasi Tahunan 14 TV Berjaringan" },
+      { id: 5, content: 'https://kpi.go.id/images/2024/Mei/UBB-1.JPG', title: "Study Visit Universitas Bina Bangsa" },
     ];
   
     useEffect(() => {
@@ -51,8 +51,12 @@ const Carousel = () => {
                 style={{backgroundImage: `url(${item.content})`}}
                 className={`carousel-item ${
                   index === 0 ? 'prevSlide' : index === 1 ? 'activeSlide' : 'nextSlide'
-                } bg-cover bg-center flex-shrink-0 h-64 w-56 flex items-center justify-center rounded-2xl transition-all duration-500 -mx-20`}  // mx-1 for smaller margin
-              ></div>
+                } bg-cover bg-center flex-shrink-0 h-64 w-56 flex items-end justify-center rounded-2xl transition-all duration-500 -mx-20`}  // mx-1 for smaller margin
+              >
+                <div className='bg-white opacity-80 h-1/3 w-full flex items-center justify-center text-center font-bold px-2 leading-tight'>
+                  <p>{item.title}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
