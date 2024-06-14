@@ -1,0 +1,30 @@
+// src/data/beritaData.js
+const DataKPID = [
+    {
+        id: 1,
+        title: "Peringati Hari Penyiaran Tingkat Jabar, KPID Ingatkan Soal Moderasi Beragama",
+        date: "20 Mei 2024",
+        location: "Kadipaten",
+        img: "https://kpi.go.id/images/2018/kpid.jpg",
+        content:
+          "Peringatan Hari Penyiaran Tingkat Jawa Barat (Jabar) di Kampus Institut Agama Islam Latifah Mubarokiyah (IAILM) Suryalaya, Kamis 16 ...",
+        writer: "RG",
+        fullcontent:
+        "Peringatan Hari Penyiaran Tingkat Jawa Barat (Jabar) di Kampus Institut Agama Islam Latifah Mubarokiyah (IAILM) Suryalaya, Kamis 16 Mei 2024, Komisi Penyiaran Indonesia Daerah (KPID) Jawa Barat menggelar seminar dengan tema Moderasi Beragama.<br><br>Ketua KPID Provinsi Jawa Barat Dr Adiyana Slamet menuturkan, seminar yang di gelar oleh KPID Jawa Barat di IAILM Suryalaya merupakan titik kedua. Rencananya, kegiatan seminar akan digelar di empat titik lainnya. “Roadshow ini masih ada empat titik lagi yang akan kita laksanakan,” kata Adiyana.<br><br>Seminar di IAILM, lanjut Adiyana, mengambil tema moderasi beragama di lembaga penyiaran. Hal ini lantaran, KPID melihat, moderasi beragama tersebut salah satu isu yang dibutuhkan oleh masyarakat khususnya di Jawa Barat saat ini. “IAILM Suryalaya ini merupakan salah satu lembaga episentrum, dan sebagai pusat ajar yang memunculkan bahwa agama apapun maupun negara yang tidak usah saling menjelekkan,” jelas Adiyana.<br><br>Kegiatan seminar, tambah Adiyana, merupakan bagian dari ikhtiarnya. Mengingat adanya temuan beberapa lembaga penyiaran yang nakal bahkan saling menyerang, membid’ah-bid’ahkan, apalagi yang berbeda agama. Maka KPID sebagai lembaga pengawas akan terus mengawasinya.<br><br>“Tentunya akan kami panggil. Khususnya permasalahan yang strategis terutama seperti berkaitan dengan moderasi beragama maka, akan diminta surat pernyataan sesuai perundang-undangan. Tentunya juga sangksi kita berikan sesuai dengan regulasi yang ada,” ucap Adiyana.<br><br>Agar tidak terjadi hal itu, lanjut Adiyana, pihaknya sudah membuat dan menyebarakan surat edaran terkait program siaran keagamaan. Dan ia menginginkan lembaga penyiaran taat kepada regulasi yang ada. “Jadi publik ini harus merasakan manfaat dari adanya lembaga penyiaran, baik suku, ras dan golongan,” ujar Adiyana.",
+      },
+      {
+        id: 2,
+        title: "Lantik Anggota KPID Jambi Terpilih, Gubernur Harapkan Kinerja Positif",
+        date: "17 Mei 2024",
+        location: "Jambi",
+        img: "https://kpi.go.id/images/2024/Mei/KPID-Jambi-Terpilih.jpg",
+        content:
+          "Gubernur Jambi, H. Al Haris melantik tujuh anggota komisioner Komisi Penyiaran Indonesia Daerah (KPID) Provinsi Jambi masa jabatan...",
+        writer: "RG",
+        fullcontent:
+        "Gubernur Jambi, H. Al Haris melantik tujuh anggota komisioner Komisi Penyiaran Indonesia Daerah (KPID) Provinsi Jambi masa jabatan 2024-2027, di Auditorium Rumah Dinas Gubernur Jambi, Kamis (16/5/2024). <br><br> Adapun tujuh anggota KPID yang dilantik tersebut adalah A. Rahim, Wiwin Belantara, Riadi, Asriyadi, Kemas Al Fajri, Nur Ihsan dan Anton Yusika. Hadir dalam kesempatan tersebut Komisioner KPI Pusat sekaligus Koordinator Wilayah Provinsi Jambi Amin Shabana. <br><br> “Alhamdulillah pada sore hari ini kita telah melantik seluruh komisioner KPID dan juga hadir KPI Pusat ke Provinsi Jambi yang langsung menyaksikan pelantikan ini. Berharap mereka mempunyai kinerja yang bagus ke depannya dan memberikan dampak positif di Provinsi Jambi tentunya,” kata gubernur. <br><br> Intinya, lanjut dia, tugas mereka sangatlah membantu pemerintah terutama dalam menghadapi tahun politik ke depannya dan juga mempunyai dampak positif terhadap penyiaran Jambi, mengawasi sekaligus juga memberikan sanksi serta juga sosialisasi kepada masyarakat. <br><br> Al Haris mengatakan, proses perjalanan Komisi Penyiaran Indonesia Daerah telah dapat menempatkan dirinya pada posisi peran yang sangat strategis, dalam memberikan kontrol dan pengawasan terhadap substansi penyiaran. <br><br> “Mudah-mudahan Komisi Penyiaran akan lebih memacu diri lagi, menjadi sebuah lembaga independen yang berfungsi mewadahi aspirasi, serta mewakili kepentingan masyarakat dibidang penyiaran,” kata gubernur. <br><br> Ia juga menuturkan, sebagai lembaga independen, komisi penyiaran telah mampu menjembatani kepentingan masyarakat dengan institusi pemerintah dan lembaga penyiaran. <br><br> “Lembaga penyiaran itu sendiri, merupakan salah satu lembaga yang berperan, dan dituntut untuk memberikan informasi yang benar tentang pelaksanaan pembangunan, melalui kekuatan informasi,” tutur Al Haris. <br><br> Al Haris juga meyakini bahwa pemilihan komisioner telah melalui proses seleksi dan aturan yang berlaku, dalam rangka medapatkan personel anggota Komisi Penyiaran Indonesia Daerah Jambi. <br><br> “Hari ini kita melaksanakan pelantikan anggota Komisi Penyiaran Indonesia Daerah Jambi. Saya yakin pemilihan komisioner telah melalui proses seleksi dan aturan yang berlaku, dalam rangka medapatkan personel anggota Komisi Penyiaran Indonesia Daerah Jambi yang berkualitas, sesuai dengan yang kita cita-citakan,” ucapnya. <br><br> Dia berharap usai pelantikan ini dapat belajar untuk bersikap lebih rasional dalam menjalankan tugas dan fungsi saudara. “Kita semua memahami bahwa untuk menduduki jabatan dan amanah yang diberikan ini, bukanlah pekerjaan yang mudah. Ada proses dan mekanisme serta persyaratan yang harus dipenuhi,” pungkas gubernur. <br><br> Sementara itu, Komisioner KPI Pusat sekaligus Koordinator Wilayah Provinsi Jambi, Amin Shabana mengucapkan selamat atas dilantiknya 7 komisioner baru KPID Provinsi Jambi. <br><br> “Semoga bisa membuat industri penyiaran lokal di Jambi semakin kuat dan memberikan manfaat bagi masyarakat Jambi sendiri,” ujarnya."
+      }
+  ];
+  
+  export default DataKPID;
+  
