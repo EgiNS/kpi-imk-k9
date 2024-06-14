@@ -24,9 +24,9 @@ const BeritaKPID = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8">
+    <div className="mx-auto mt-8">
       <h1 className="font-bold text-[#420101] md:text-3xl text-2xl mb-6">Berita KPID</h1>
-      <h3 className="font-medium text-[#000000] md:text-sm text-sm mb-2">
+      <h3 className="font-medium text-[#000000] md:text-base text-base mb-4">
         Menampilkan {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, kpid.length)} dari {kpid.length} Berita KPID
       </h3>
       <div className="flex overflow-x-auto no-scrollbar"></div>

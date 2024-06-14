@@ -14,7 +14,7 @@ const DetailKPID = () => {
     const firstParagraph = paragraphs.shift();
 
     return (
-        <div className="max-w-6xl mx-auto p-6 bg-white shadow-md mt-6">
+        <div className="mx-auto p-6 bg-white shadow-md mt-6">
             <h1 className="font-bold text-[#000000] md:text-3xl text-2xl mb-6 text-center">{berita.title}</h1>
             <div className="flex justify-center mb-6">
                 <img src={berita.img} alt="Gambar Kegiatan" className="w-98" />

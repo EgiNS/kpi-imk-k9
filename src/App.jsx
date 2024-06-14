@@ -13,11 +13,13 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route index element={ <Newslatter/> }/>
+          <Route index element={ <Beranda/> }/>
           <Route path="/terkini/:id" element={ <FullBeritaTerkini />}/>
           <Route path="/kpid/:id" element={ <FullBeritaKPID />}/>
           <Route path="/terkini" element={ <BeritaTerkini />}/>
           <Route path="/kpid" element={ <BeritaKPID />}/>
+          <Route path="/dinamika" element={ <DinamikaPenyiaran />}/>
+          <Route path="/newslatter" element={ <Newslatter />}/>
         </Routes>
       </BrowserRouter>
     </div>
