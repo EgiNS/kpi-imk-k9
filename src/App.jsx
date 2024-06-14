@@ -7,6 +7,9 @@ import FullBeritaKPID from "./pages/PageBerita/newskpid";
 import FullBeritaTerkini from "./pages/PageBerita/news";
 import DinamikaPenyiaran from "./pages/PageBerita/dinamika";
 import Newslatter from "./pages/PageBerita/newsletter";
+import VisiMisi from "./pages/PageTentang/VisiMisi";
+import DasarPembentukan from "./pages/PageTentang/DasarPembentukan";
+import StrukturSekretariat from "./pages/PageTentang/StrukturSekretariat";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path="/kpid" element={ <BeritaKPID />}/>
           <Route path="/dinamika" element={ <DinamikaPenyiaran />}/>
           <Route path="/newslatter" element={ <Newslatter />}/>
+          <Route path="/visimisi" element={ <VisiMisi />}/>
+          <Route path="/dasarpembentukan" element={ <DasarPembentukan />}/>
+          <Route path="/struktursekretariat" element={ <StrukturSekretariat />}/>
         </Routes>
       </BrowserRouter>
     </div>
