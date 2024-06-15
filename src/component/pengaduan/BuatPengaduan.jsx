@@ -1,0 +1,194 @@
+import React, { useState } from 'react';
+
+export default function BuatPengaduan() {
+  const [kategori, setKategori] = useState('');
+  const [klasifikasi, setKlasifikasi] = useState('');
+  const [program, setProgram] = useState('');
+  const [lembagaPenyiaran, setLembagaPenyiaran] = useState('');
+  const [tanggalTayang, setTanggalTayang] = useState('');
+  const [jamTayang, setJamTayang] = useState('');
+  const [pesanAduan, setPesanAduan] = useState('');
+  const [filePendukung, setFilePendukung] = useState(null);
+
+  return (
+    <div className="max-w-3xl mx-auto mt-16 mb-16">
+      <h1 className="text-center md:text-3xl text-2xl text-[#420101] font-bold mt-16 mb-4">
+        Layanan Pengaduan Online Masyarakat
+      </h1>
+
+      <div className="border rounded-lg shadow-lg">
+        {/* Card Header */}
+        <div className="p-4 bg-[#EDDBD9] border-b border-[#EDDBD9] flex items-center ">
+          <svg className="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0zM12 9v4m0 4h.01"/>
+          </svg>
+          <p className="font-medium text-700">Perhatikan Cara Menyampaikan Pengaduan Yang Baik dan Benar!</p>
+        </div>
+
+        {/* Card Body */}
+        <div className="p-4">
+          <h2 className="text-xl font-semibold text-center mb-4">Formulir Pengaduan</h2>
+          
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="kategori">Kategori Lembaga Penyiaran</label>
+            <div>
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  value="Televisi"
+                  checked={kategori === 'Televisi'}
+                  onChange={(e) => setKategori(e.target.value)}
+                  className="mr-2"
+                />
+                Televisi
+              </label>
+              <label className="inline-flex items-center ml-4">
+                <input
+                  type="radio"
+                  value="Radio"
+                  checked={kategori === 'Radio'}
+                  onChange={(e) => setKategori(e.target.value)}
+                  className="mr-2"
+                />
+                Radio
+              </label>
+            </div>
+          </div>
+          
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="klasifikasi">Klasifikasi Lembaga</label>
+            <select
+              id="klasifikasi"
+              value={klasifikasi}
+              onChange={(e) => setKlasifikasi(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            >
+              <option value="">Pilih</option>
+              <option value="Lokal">Lokal</option>
+              <option value="Nasional">Nasional</option>
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="lembagaPenyiaran">Lembaga Penyiaran</label>
+            <select
+              id="lembagaPenyiaran"
+              value={lembagaPenyiaran}
+              onChange={(e) => setLembagaPenyiaran(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            >
+              <option value="">Pilih</option>
+              <option value="100,2 GEMAFM YESS">100,2 GEMAFM YESS</option>
+              <option value="100,4 KLCBS">100,4 KLCBS</option>
+              <option value="101,1 MGT Radio">101,1 MGT Radio</option>
+              <option value="101,2 Dioz FM Bali">101,2 Dioz FM Bali</option>
+              <option value="101,9 FM The Spirit Of Moslem">101,9 FM The Spirit Of Moslem</option>
+              <option value="102 DC FM">102 DC FM</option>
+              <option value="NET">NET</option>
+              <option value="METRO TV">METRO TV</option>
+              <option value="KOMPAS TV">KOMPAS TV</option>
+              <option value="iNews">iNews</option>
+              <option value="SCTV">SCTV</option>
+              <option value="RCTI">RCTI</option>
+              <option value="Indosiar">Indosiar</option>
+              <option value="GTV">GTV</option>
+              <option value="CNN Indonesia">CNN Indonesia</option>
+              <option value="CNBN Indonesia">CNBN Indonesia</option>
+              <option value="ANTV">ANTV</option>
+            </select>
+          </div>
+
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="program">Program Penyiaran</label>
+            <select
+              id="program"
+              value={program}
+              onChange={(e) => setProgram(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            >
+              <option value="">Pilih</option>
+              <option value="Iklan Covid-19 versi vaksinasi">Iklan Covid-19 versi vaksinasi</option>
+              <option value="Iklan Covid-19 versi cluster">Iklan Covid-19 versi cluster</option>
+              <option value="Iklan Covid-19 versi koor host TVRI">Iklan Covid-19 versi koor host TVRI</option>
+              <option value="Himbauan Covid">Himbauan Covid</option>
+              <option value="Iklan Covid-19 versi hoax">Iklan Covid-19 versi hoax</option>
+              <option value="Iklan Jaco Lumbar Pillow Therapy">Iklan Jaco Lumbar Pillow Therapy</option>
+              <option value="ILM Covid-19">ILM Covid-19</option>
+              <option value="ILM Covid-19 versi TVRI">ILM Covid-19 versi TVRI</option>
+              <option value="ILM Vaksinasi Covid-19 Aman & Halal">ILM Vaksinasi Covid-19 Aman & Halal</option>
+              <option value="Indonesia Hari Ini">Indonesia Hari Ini</option>
+              <option value="Net 24">Net 24</option>
+              <option value="Sinema Mistik">Berbagi Rezeki</option>
+              <option value="Berhenti Merokok Hebat">Berhenti Merokok Hebat</option>
+              <option value="Bioskop TransTV">Bioskop TransTV</option>
+              <option value="Breaking News">Breaking News</option>
+              <option value="Breakout">Breakout</option>
+              <option value="Comedy Night Live">Comedy Night Live</option>
+              <option value="Drive N Jive">Drive N Jive</option>
+              <option value="Dunia Terbalik">Dunia Terbalik</option>
+              <option value="Elshinta News and Talk">Elshinta News and Talk</option>
+              <option value="Global Morning Show">Global Morning Show</option>
+              <option value="Ini Talkshow">Ini Talkshow</option>
+              <option value="Kabar Hari Ini">Kabar Hari Ini</option>
+              <option value="Kabar Pagi">Kabar Pagi</option>
+              <option value="Kabar Siang">Kabar Siang</option>
+              <option value="Tetangga Masa Gitu">Tetangga Masa Gitu</option>
+              <option value="Tonight Show">Tonight Show</option>
+            </select>
+          </div>
+
+          <div className="mb-4 flex flex-row">
+            <div className="mr-2 w-1/2">
+              <label className="block mb-2 font-medium" htmlFor="tanggalTayang">Tanggal Tayang</label>
+              <input
+                type="date"
+                id="tanggalTayang"
+                value={tanggalTayang}
+                onChange={(e) => setTanggalTayang(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="ml-2 w-1/2">
+              <label className="block mb-2 font-medium" htmlFor="jamTayang">Jam Tayang</label>
+              <input
+                type="time"
+                id="jamTayang"
+                value={jamTayang}
+                onChange={(e) => setJamTayang(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="pesanAduan">Pesan Aduan</label>
+            <textarea
+              id="pesanAduan"
+              value={pesanAduan}
+              onChange={(e) => setPesanAduan(e.target.value)}
+              placeholder="Ketik Uraian Pengaduan"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              rows="4"
+            />
+          </div>
+
+          <div className="mb-4">
+            <label className="block mb-2 font-medium" htmlFor="filePendukung">Pilih File Pendukung</label>
+            <input
+              type="file"
+              id="filePendukung"
+              onChange={(e) => setFilePendukung(e.target.files[0])}
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            />
+            <p className="text-xs text-gray-500">* Format file mp4, mp3, pdf, jpg, jpeg, png, JPG, JPEG, PNG, dan ukuran maksimal 15 MB</p>
+          </div>
+        </div>
+
+        {/* Card Footer */}
+        <div className="p-4 bg-gray-100 border-t flex justify-end">
+          <button className="bg-[#9D262A] text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Proses</button>
+        </div>
+      </div>
+    </div>
+  );
+}

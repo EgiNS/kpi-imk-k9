@@ -15,7 +15,13 @@ import DasarPembentukan from "./pages/PageTentang/DasarPembentukan";
 import StrukturSekretariat from "./pages/PageTentang/StrukturSekretariat";
 import Dinamika from "./pages/PageBerita/Dinamika";
 import NewsDinamika from "./pages/PageBerita/NewsDinamika";
-
+import Apresiasi from "./pages/apresiasi/Lihat";
+import Pengaduan from "./pages/pengaduan/Alur";
+import BuatPengaduan from "./pages/pengaduan/Buat";
+import LihatPengaduan from "./pages/pengaduan/Lihat";
+import LacakPengaduan from "./pages/pengaduan/Lacak";
+import ProsedurPerizinan from "./pages/struktur/ProsedurPerizinan";
+import PengawasanPenyiaran from "./pages/struktur/PengawasanPenyiaran";
 
 function App() {
   return (
@@ -37,6 +43,13 @@ function App() {
           <Route path="/visimisi" element={ <VisiMisi />}/>
           <Route path="/dasarpembentukan" element={ <DasarPembentukan />}/>
           <Route path="/struktursekretariat" element={ <StrukturSekretariat />}/>
+          <Route path="/apresiasi" element={ <Apresiasi /> }/>
+          <Route path="/pengaduan" element={ <Pengaduan /> }/>
+          <Route path="/buat-pengaduan" element={<BuatPengaduan />} />
+          <Route path="/lihat-pengaduan" element={<LihatPengaduan />} />
+          <Route path="/lacak-pengaduan" element={<LacakPengaduan />} />
+          <Route path="/prosedur-perizinan" element={<ProsedurPerizinan />}/>
+          <Route path="/pengawasan-penyiaran" element={<PengawasanPenyiaran />}/>
         </Routes>
       </BrowserRouter>
     </div>
