@@ -46,8 +46,8 @@ export default function NavBar() {
             </button>
             {openMenu === 1 && (
               <div className="absolute top-full left-0 mt-2 w-48 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
+                <Link to="/prosedur-perizinan" className="text-sm block px-4 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
+                <Link to="/pengawasan-penyiaran" className="text-sm block px-4 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
               </div>
             )}
           </div>
