@@ -10,6 +10,8 @@ import Newslatter from "./pages/PageBerita/newsletter";
 import VisiMisi from "./pages/PageTentang/VisiMisi";
 import DasarPembentukan from "./pages/PageTentang/DasarPembentukan";
 import StrukturSekretariat from "./pages/PageTentang/StrukturSekretariat";
+import Kajian from "./pages/PageKajian/kajian";
+import FullKajian from "./pages/PageKajian/newskajian";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/visimisi" element={ <VisiMisi />}/>
           <Route path="/dasarpembentukan" element={ <DasarPembentukan />}/>
           <Route path="/struktursekretariat" element={ <StrukturSekretariat />}/>
+          <Route path="/kajian" element={ <Kajian />}/>
+          <Route path="/kajian/:id" element={ <FullKajian />}/>
         </Routes>
       </BrowserRouter>
     </div>
