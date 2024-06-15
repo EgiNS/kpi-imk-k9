@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { newsData } from './DataBeranda';
+import { Link } from 'react-router-dom';
+import BeritaNonNewsletter from './BeritaNonNewsletter';
+import BeritaNewsletter from './BeritaNewsletter';
 
 const Berita = () => {
     const [activeTab, setActiveTab] = useState('Berita Terkini');
@@ -21,25 +24,20 @@ const Berita = () => {
             </button>
           ))}
         </div>
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-8">
-          {newsData[activeTab].map((item) => (
-            <div key={item.id} className="p-4 rounded-2xl shadow grid sm:grid-cols-6 grid-cols-1 sm:grid-rows-1 grid-rows-2 gap-x-3 bg-[#EDDBD9]">
-              <div style={{backgroundImage: `url(${item.img})`}} className="sm:col-span-2 bg-cover bg-center"/>
-              <div className='sm:col-span-4'>
-                <h2 className="text-lg font-semibold">{item.title}</h2>
-                <p className="text-xs">{item.date}</p>
-                <p className="mt-4 text-sm">{item.location} - {item.content}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {
+          activeTab !== "Newsletter" ?
+          <BeritaNonNewsletter items={newsData[activeTab]} />
+          :
+          <BeritaNewsletter items={newsData[activeTab]} />
+        }
+        
         {newsData[activeTab].length === 0 && (
           <p className="mt-4 text-gray-500">No news available for {activeTab}</p>
         )}
         <div className="mt-5 text-right">
-          <button className="text-[#420101] font-semibold hover:underline">
+          <Link to={newsData[activeTab][0].url} className="text-[#420101] font-semibold hover:underline">
             Lihat Selengkapnya <span className='font-extrabold'>→</span>
-          </button>
+          </Link>
         </div>
         <div className='border-b-2 border-[#CEABA5] mt-5 mb-10'></div>
       </div>

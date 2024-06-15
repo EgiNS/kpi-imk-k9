@@ -1,14 +1,14 @@
 import Navbar from "../../component/Navbar.jsx"
 import Footer from "../../component/Footer.jsx"
-import Newsletter from "../../component/template-berita/Newsletter.jsx";
+import DetailDinamika from "../../component/template-berita/DetailDinamika.jsx";
 
-export default function newslatter() {
+export default function NewsDinamika() {
   return (
     <>
       <Navbar />
       <div className="pt-24">
         <div className="lg:px-20 md:px-10 px-4">
-            <Newsletter />
+            <DetailDinamika />
         </div>
         <Footer />
       </div>

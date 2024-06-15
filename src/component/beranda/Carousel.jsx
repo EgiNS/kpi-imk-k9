@@ -53,7 +53,7 @@ const Carousel = () => {
                   index === 0 ? 'prevSlide' : index === 1 ? 'activeSlide' : 'nextSlide'
                 } bg-cover bg-center flex-shrink-0 h-64 w-56 flex items-end justify-center rounded-2xl transition-all duration-500 -mx-20`}  // mx-1 for smaller margin
               >
-                <div className='bg-white opacity-80 h-1/3 w-full flex items-center justify-center text-center font-bold px-2 leading-tight'>
+                <div className='bg-white opacity-80 h-2/5 w-full flex items-center justify-center text-center font-bold px-2 leading-tight'>
                   <p>{item.title}</p>
                 </div>
               </div>
