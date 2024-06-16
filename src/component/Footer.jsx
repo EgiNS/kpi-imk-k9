@@ -19,7 +19,7 @@ export default function Footer() {
                         <p><Link to="#" className="hover:underline">Gedung Komisi Penyiaran Indonesia</Link></p>
                         <p><Link to="#" className="hover:underline">Dasar Pembentukan</Link></p>
                         <p><Link to="#" className="hover:underline">Visi dan Misi</Link></p>
-                        <p><Link to="#" className="hover:underline">Profil KPI</Link></p>
+                        <p><Link to="/profil" className="hover:underline">Profil KPI</Link></p>
                     </div>
                     <div className="flex flex-col gap-y-4">
                         <p className="font-bold text-lg mt-3 mb-2">Media Sosial</p>
