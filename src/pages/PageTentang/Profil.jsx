@@ -1,6 +1,6 @@
-import Footer from "../component/Footer.jsx";
-import Navbar from "../component/Navbar.jsx";
-import { getGroupedData } from "../component/tentangKPI/DataProfil.js";
+import Footer from "../../component/Footer.jsx";
+import Navbar from "../../component/Navbar.jsx";
+import { getGroupedData } from "../../component/tentangKPI/DataProfil.js";
 
 export default function Profil() {
     const groupedData = getGroupedData();

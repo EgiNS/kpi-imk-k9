@@ -1,11 +1,11 @@
-import Footer from "../component/Footer.jsx";
-import Navbar from "../component/Navbar.jsx";
-import { dataBuku } from "../component/publikasi/DataBuku.js";
+import NavBar from "../../component/Navbar.jsx";
+import Footer from "../../component/Footer.jsx";
+import { dataBuku } from "../../component/publikasi/DataBuku.js";
 
 export default function BukuKPI() {
     return (
     <>
-      <Navbar />
+      <NavBar />
         <div className="pt-24 lg:px-20 md:px-10 px-4">
             <div>
                 <h1 className="text-2xl font-bold pt-10 mb-5"> BUKU KPI </h1>

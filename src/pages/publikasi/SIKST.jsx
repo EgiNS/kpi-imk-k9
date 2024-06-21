@@ -1,6 +1,6 @@
-import Footer from "../component/Footer.jsx";
-import Navbar from "../component/Navbar.jsx";
-import { dataSIKST } from "../component/publikasi/DataSIKST.js";
+import Footer from "../../component/Footer.jsx";
+import Navbar from "../../component/Navbar.jsx";
+import { dataSIKST } from "../../component/publikasi/DataSIKST.js";
 
 export default function SIKST() {
     return (

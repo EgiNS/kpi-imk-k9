@@ -27,11 +27,11 @@ import DetailEdaran from "./pages/edaran/DetailEdaran";
 import Kajian from "./pages/PageKajian/kajian";
 import FullKajian from "./pages/PageKajian/newskajian";
 // import Struktur from "./pages/Struktur";
-import Profil from "./pages/Profil";
-import DipaKPI from "./pages/DipaKPI";
-import SIKST from "./pages/SIKST";
-import LaporanAT from "./pages/LaporanAT";
-import BukuKPI from "./pages/BukuKPI";
+import Profil from "./pages/PageTentang/Profil";
+import DipaKPI from "./pages/publikasi/DipaKPI";
+// import SIKST from "./pages/SIKST";
+import LaporanAT from "./pages/publikasi/LaporanAT";
+import BukuKPI from "./pages/publikasi/BukuKPI";
 
 function App() {
   return (
