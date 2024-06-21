@@ -13,7 +13,7 @@ import Newslatter from "./pages/PageBerita/newsletter";
 import VisiMisi from "./pages/PageTentang/VisiMisi";
 import DasarPembentukan from "./pages/PageTentang/DasarPembentukan";
 import StrukturSekretariat from "./pages/PageTentang/StrukturSekretariat";
-import Dinamika from "./pages/PageBerita/Dinamika";
+import Dinamika from "./pages/PageBerita/dinamika";
 import NewsDinamika from "./pages/PageBerita/NewsDinamika";
 import Apresiasi from "./pages/apresiasi/Lihat";
 import Pengaduan from "./pages/pengaduan/Alur";

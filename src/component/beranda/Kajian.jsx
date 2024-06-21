@@ -1,4 +1,5 @@
 // import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import { kajianData } from "./DataBeranda";
 
 export default function Kajian() {
@@ -19,9 +20,9 @@ export default function Kajian() {
         ))}
       </div>
       <div className="mt-5 text-right">
-        <button className="text-[#420101] font-semibold hover:underline">
+        <Link to="/kajian" className="text-[#420101] font-semibold hover:underline">
           Lihat Selengkapnya <span className="font-extrabold">→</span>
-        </button>
+        </Link>
       </div>
       <div className="border-b-2 border-[#CEABA5] mt-5 mb-10"></div>
     </div>
