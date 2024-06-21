@@ -65,9 +65,9 @@ export default function NavBar() {
             {openMenu === 3 && (
               <div className="absolute top-full left-0 mt-2 w-64 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
                 <Link to="/ikpstv" className="text-sm block px-4 py-2 hover:bg-gray-100">Survei Indeks Kualitas Siaran Televisi</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">DIPA KPI</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Laporan Akhir Tahun</Link>
-                <Link to="#" className="text-sm block px-4 py-2 hover:bg-gray-100">Buku KPI</Link>
+                <Link to="/dipaKPI" className="text-sm block px-4 py-2 hover:bg-gray-100">DIPA KPI</Link>
+                <Link to="/laporanakhir" className="text-sm block px-4 py-2 hover:bg-gray-100">Laporan Akhir Tahun</Link>
+                <Link to="/bukuKPI" className="text-sm block px-4 py-2 hover:bg-gray-100">Buku KPI</Link>
               </div>
             )}
           </div>
@@ -149,9 +149,9 @@ export default function NavBar() {
             {openMenu === 3 && (
               <div className="w-full bg-[#F2EAEA] border-gray-200 shadow-lg z-10">
                 <Link to="/ikpstv" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">Survei Indeks Kualitas Siaran Televisi</Link>
-                <Link to="#" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">DIPA KPI</Link>
-                <Link to="#" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">Laporan Akhir Tahun</Link>
-                <Link to="#" className="text-sm block px-7 py-2 hover:bg-gray-100">Buku KPI</Link>
+                <Link to="/dipaKPI" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">DIPA KPI</Link>
+                <Link to="/laporanakhir" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">Laporan Akhir Tahun</Link>
+                <Link to="/bukuKPI" className="text-sm block px-7 py-2 hover:bg-gray-100">Buku KPI</Link>
               </div>
             )}
           </div>
