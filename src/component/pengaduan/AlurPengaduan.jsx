@@ -23,7 +23,7 @@ export default function AlurPengaduan() {
       </h1>
 
       <div className="flex justify-center items-center flex-grow">
-        <img src="/public/img/alur_pengaduan.png" alt="Alur Pengaduan" className="max-w-3xl w-full h-auto" />
+        <img src="/img/alur_pengaduan.png" alt="Alur Pengaduan" className="max-w-3xl w-full h-auto" />
       </div>
 
       <div className="flex md:flex-row flex-col justify-center md:space-x-8 md:space-y-0 space-y-4 mt-16 mb-16">
