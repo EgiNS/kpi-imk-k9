@@ -1,4 +1,4 @@
-// src/data/beritaData.js
+
 const DataKPID = [
   {
     id: 1,

@@ -24,6 +24,8 @@ import ProsedurPerizinan from "./pages/struktur/ProsedurPerizinan";
 import PengawasanPenyiaran from "./pages/struktur/PengawasanPenyiaran";
 import Edaran from "./pages/edaran/Edaran";
 import DetailEdaran from "./pages/edaran/DetailEdaran";
+import Kajian from "./pages/PageKajian/kajian";
+import FullKajian from "./pages/PageKajian/newskajian";
 
 function App() {
   return (
@@ -54,6 +56,8 @@ function App() {
           <Route path="/pengawasan-penyiaran" element={<PengawasanPenyiaran />}/>
           <Route path="/edaran-dan-sanksi" element={ <Edaran /> }/>
           <Route path="/edaran-dan-sanksi/:id" element={ <DetailEdaran />} />
+          <Route path="/kajian" element={ <Kajian />}/>
+          <Route path="/kajian/:id" element={ <FullKajian />}/>
         </Routes>
       </BrowserRouter>
     </div>
