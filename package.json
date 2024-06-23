@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "chart.js": "^4.4.3",
     "chartjs-plugin-annotation": "^3.0.1",
     "d3": "^7.9.0",

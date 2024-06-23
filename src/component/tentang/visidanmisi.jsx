@@ -1,4 +1,3 @@
-import Aos from 'aos';
 import React from 'react';
 import { useEffect } from 'react';
 import Breadcrumbs from '../Breadcrumb';
@@ -13,7 +12,7 @@ const visidanmisi = () => {
             <div className="mt-12">
                 <Breadcrumbs />
             </div>
-            <div data-aos="fade-up" className='p-6 pt-2 shadow-md my-6 rounded-xl'>
+            <div className='p-6 pt-2 shadow-md my-6 rounded-xl'>
                 <p className='text-xl font-bold mb-4 text-center'>Visi</p>
                 <div className="text-lg leading-relaxed text-[#000000] text-justify mb-6">
                     <p>Terwujudnya sistem penyiaran nasional yang berkeadilan dan bermartabat untuk dimanfaatkan sebesar-besarnya bagi kesejahteraan masyarakat.</p>

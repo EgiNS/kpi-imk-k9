@@ -188,7 +188,7 @@ const Ikpstv = () => {
           Indeks Kualitas Program Siaran Televisi
         </h1>
         <div className="mt-2 w-full md:px-14 px-5">
-          <div data-aos="fade-up" className="lg:grid lg:grid-cols-2 lg:grid-rows-1 flex flex-col mb-10 gap-x-5">
+          <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 flex flex-col mb-10 gap-x-5">
             <div className="pr-5 border-1 border-[#828282] rounded-xl shadow-md p-4 lg:mb-0 mb-6">
               <p>
                 Indeks Kualitas Program Siaran Televisi (IKPSTV) adalah sebuah
@@ -214,7 +214,7 @@ const Ikpstv = () => {
               <LineChart data={dataLineChart} />
             </div>
           </div>
-          <div data-aos="zoom-in" className="lg:grid lg:grid-cols-6 lg:gap-x-10 flex flex-col border-1 border-black rounded-xl shadow-md p-3 mb-10">
+          <div className="lg:grid lg:grid-cols-6 lg:gap-x-10 flex flex-col border-1 border-black rounded-xl shadow-md p-3 mb-10">
             <h1 className="lg:hidden block md:text-lg text-base text-center font-bold text-[#420101]">Indeks Kualitas Program Siaran Televisi {filterType == "year" ? "Berdasarkan Kategori Program Tahun " + selectedYear : "Berdasarkan Program "+ selectedProgram + " Tahun 2017-2022"}</h1>
             <div className="lg:col-span-4 col-span-6 lg:order-first order-last">
               <h1 className="text-center lg:block hidden font-bold text-[#420101]">Indeks Kualitas Program Siaran Televisi {filterType == "year" ? "Berdasarkan Kategori Program Tahun " + selectedYear : "Berdasarkan Program "+ selectedProgram + " Tahun 2017-2022"}</h1>
@@ -277,7 +277,7 @@ const Ikpstv = () => {
           <h1 className="text-center md:text-3xl text-2xl text-[#420101] font-bold mb-4 mt-4">
             Publikasi Lengkap
           </h1>
-          <div data-aos="fade-right" className="grid md:grid-cols-4 md:grid-rows-2 grid-cols-2 grid-rows-4 gap-x-3 gap-y-2 mb-16">
+          <div className="grid md:grid-cols-4 md:grid-rows-2 grid-cols-2 grid-rows-4 gap-x-3 gap-y-2 mb-16">
             <Publikasi src='\img\ikpstv\2015.png' title='Indeks Kualitas Program Siaran Televisi 2015' link="https://drive.google.com/file/d/0ByU1oJt56HTfck9wQ3pFRFNfRDg/view?resourcekey=0-M3bg7R5BbsZs1VeqQjJvCQ" />
             <Publikasi src='\img\ikpstv\2016.png' title='Indeks Kualitas Program Siaran Televisi 2016' link="https://drive.google.com/file/d/0ByU1oJt56HTfREI0WHBwSlBqanc/view?resourcekey=0-AOprLIsQb7qEQm8mGrqYXA" />
             <Publikasi src='\img\ikpstv\2017.png' title='Indeks Kualitas Program Siaran Televisi 2017' link="https://www.kpi.go.id/download/penelitian/Ekspose_Survei_II_tahun_2017.pdf" />

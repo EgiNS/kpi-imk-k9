@@ -33,7 +33,7 @@ export default function AlurPengaduan() {
           Alur Pengaduan
         </h1>
 
-        <div data-aos="zoom-in" className="flex justify-center items-center flex-grow">
+        <div className="flex justify-center items-center flex-grow">
           <img
             src="/img/alur_pengaduan.png"
             alt="Alur Pengaduan"

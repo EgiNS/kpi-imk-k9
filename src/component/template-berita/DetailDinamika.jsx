@@ -23,7 +23,7 @@ const DetailDinamika = () => {
             <div className="mt-12 mb-8">
                 <Breadcrumbs />
             </div>
-            <div data-aos="fade-up" className="mx-auto p-6 bg-white shadow-md my-6 rounded-xl">
+            <div className="mx-auto p-6 bg-white shadow-md my-6 rounded-xl">
                 <h1 className="font-bold text-[#000000] md:text-3xl text-2xl mb-6 text-center">{berita.title}</h1>
                 <div className="mb-6 text-sm">
                     <p className='font-bold'>Detail</p>

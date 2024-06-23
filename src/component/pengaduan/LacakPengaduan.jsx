@@ -36,7 +36,7 @@ export default function LacakPengaduan() {
           Telusuri Aduan Penyiaran Anda
         </h1>
         
-        <div data-aos="fade-left" className="flex justify-center mt-12 mb-40">
+        <div className="flex justify-center mt-12 mb-40">
           <div className="flex justify-center mt-4 w-full">
             <div>
               <div className='flex flex-row w-full'>

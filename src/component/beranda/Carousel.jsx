@@ -43,7 +43,7 @@ const Carousel = () => {
     };
   
     return (
-      <div data-aos="zoom-in" className="relative w-3/4 max-w-5xl mx-auto">
+      <div className="relative w-3/4 max-w-5xl mx-auto">
         <div className="flex items-center justify-center overflow-hidden py-10 pt-20">
           {getVisibleSlides().map((item, index) => (
             <div key={item.id}>

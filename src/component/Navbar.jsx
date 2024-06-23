@@ -123,6 +123,12 @@ export default function NavBar() {
         </div>
         <div className='flex flex-row gap-x-5'>
         <div className="flex flex-row gap-x-5 min-[925px]:gap-x-10 items-center">
+        <button
+            className="min-[925px]:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <img src={isMenuOpen ? close : hamburger} alt="Menu" className="sm:h-8 h-5" />
+          </button>
       {isLoggedIn ? (
         <div className="relative">
           <img
@@ -145,16 +151,10 @@ export default function NavBar() {
         </div>
       ) : (
         <Link to="/login">
-          <img src={loginLogo} alt="Login" className="h-8" />
+          <img src={loginLogo} alt="Login" className="sm:h-8 h-5" />
         </Link>
       )}
     </div>
-          <button
-            className="min-[925px]:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <img src={isMenuOpen ? close : hamburger} alt="Menu" className="sm:h-8 h-6" />
-          </button>
         </div>
       </div>
       {isMenuOpen && (

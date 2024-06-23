@@ -11,7 +11,7 @@ const ProsedurIzin = () => {
       <div className="mt-6">
         <Breadcrumbs />
       </div>
-      <div data-aos="fade-up" className="p-6 pt-2 shadow-md my-6 rounded-xl">
+      <div className="p-6 pt-2 shadow-md my-6 rounded-xl">
         <h1 className="font-bold text-center text-[#420101] md:text-3xl text-2xl mb-6">
           Prosedur Perizinan
         </h1>

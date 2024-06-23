@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import Breadcrumbs from '../Breadcrumb';
-import Aos from 'aos';
 
 const dasar = () => {
     useEffect(() => {
@@ -12,7 +11,7 @@ const dasar = () => {
             <div className="mt-12">
                 <Breadcrumbs />
             </div>
-            <div data-aos="fade-up" className='p-6 pt-2 shadow-md my-6 rounded-xl'>
+            <div className='p-6 pt-2 shadow-md my-6 rounded-xl'>
                 <h1 className="font-bold text-center text-[#420101] md:text-3xl sm:text-2xl text-xl mb-6">Dasar Pembentukan</h1>
                 <div className="text-base leading-relaxed text-[#000000] text-justify">
                     <p>Undang-undang Penyiaran Nomor 32 Tahun 2002 merupakan dasar utama bagi pembentukan Komisi Penyiaran Indonesia (KPI). Semangatnya adalah pengelolaan sistem penyiaran yang merupakan ranah publik harus dikelola oleh sebuah badan independen yang bebas dari campur tangan pemodal maupun kepentingan kekuasaan.</p>

@@ -48,7 +48,6 @@ export default function BukuKPI() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center mb-10">
             {filteredBerita.map((item) => (
               <div
-                data-aos="fade-up"
                 key={item.id}
                 className="p-4 rounded-2xl shadow-md w-full flex flex-col items-center h-full"
               >

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function BeritaNonNewsletter({ items, url }) {
   return (
-    <div data-aos="fade-right" className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-8">
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-8">
       {items.map((item) => (
         <div
           key={item.id}

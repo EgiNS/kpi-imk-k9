@@ -11,7 +11,7 @@ const RegulasiComp = () => {
   }, []);
 
   return (
-    <div data-aos="fade-up" className="p-6 pt-2 shadow-md my-6 rounded-xl">
+    <div className="p-6 pt-2 shadow-md my-6 rounded-xl">
       <h1 className="text-center md:text-3xl sm:text-2xl text-lg text-[#420101] font-bold lg:mb-4 mb-2">
         Regulasi KPI
       </h1>

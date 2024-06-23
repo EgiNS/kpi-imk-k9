@@ -11,7 +11,7 @@ export default function SiaranDetail({ edaran }) {
       <div className="mb-8">
         <Breadcrumbs />
       </div>
-      <div data-aos="fade-up" className="mx-auto p-6 bg-white shadow-md my-6 rounded-xl">
+      <div className="mx-auto p-6 bg-white shadow-md my-6 rounded-xl">
         <h1 className="text-center font-bold mb-2 text-lg">SIARAN PERS</h1>
         <h2 className="text-center font-bold mb-2 text-lg">
           Nomor: {edaran.nomor}

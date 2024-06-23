@@ -10,7 +10,7 @@ export default function Kajian() {
       </h1>
       <div className="w-full grid md:grid-rows-1 md:grid-cols-5 sm:grid-cols-3 sm:grid-rows-2 min-[500px]:grid-rows-3 min-[500px]:grid-cols-2 gap-x-2">
         {kajianData.map((item) => (
-          <div data-aos="fade-left" key={item.id} className="p-4 rounded-2x">
+          <div key={item.id} className="p-4 rounded-2x">
             <Link to={`kajian/${item.slug}`}>
               <img src={item.img} alt="" className="w-full cursor-pointer" />
             </Link>

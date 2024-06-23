@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export default function Layanan() {
 
     return (
-        <div data-aos="fade-up" className="grid grid-rows-1 grid-cols-4 lg:px-24 md:px-16 cursor-pointer justify-center lg:gap-x-28 md:gap-x-16 gap-x-5 mt-6">
+        <div className="grid grid-rows-1 grid-cols-4 lg:px-24 md:px-16 cursor-pointer justify-center lg:gap-x-28 md:gap-x-16 gap-x-5 mt-6">
             <Link to="/apresiasi" className="flex flex-col items-center justify-center">
                 <img src={apresiasi} alt="" className="rounded-full"/>
                 <p className="text-center text-[#420101] sm:text-base text-sm font-medium mt-2">Apresiasi</p>

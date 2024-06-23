@@ -2,19 +2,12 @@ import { useEffect } from "react";
 import Footer from "../../component/Footer.jsx";
 import Navbar from "../../component/Navbar.jsx";
 import { getGroupedData } from "../../component/tentangKPI/DataProfil.js";
-import Aos from "aos";
 import Breadcrumbs from "../../component/Breadcrumb.jsx";
 
 export default function Profil() {
   const groupedData = getGroupedData();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    Aos.init({
-      disable: window.innerWidth < 768, // Disable AOS on mobile devices
-    });
   }, []);
 
   return (
@@ -24,7 +17,7 @@ export default function Profil() {
         <div className="mt-12">
           <Breadcrumbs />
         </div>
-        <div data-aos="fade-up" className="pt-2 my-6">
+        <div className="pt-2 my-6">
           <h1 className="font-bold text-center text-[#420101] md:text-3xl sm:text-2xl text-xl mb-6">
             Profil KPI
           </h1>

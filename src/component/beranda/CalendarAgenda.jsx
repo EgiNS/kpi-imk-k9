@@ -33,7 +33,7 @@ const CalendarAgenda = () => {
   };
 
   return (
-    <div data-aos="fade-left" className="mx-auto mt-16 mb-20 flex sm:flex-row flex-col sm:space-x-11">
+    <div className="mx-auto mt-16 mb-20 flex sm:flex-row flex-col sm:space-x-11">
       <div className="sm:w-1/2 w-full">
         <Calendar
           onChange={setDate}

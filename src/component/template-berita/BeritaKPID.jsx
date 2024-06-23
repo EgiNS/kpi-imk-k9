@@ -73,7 +73,6 @@ const BeritaKPID = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
         {currentItems.map((berita) => (
           <div
-            data-aos="fade-right"
             key={berita.id}
             className="p-4 rounded-2xl shadow grid sm:grid-cols-6 grid-cols-1 sm:grid-rows-1 grid-rows-2 gap-x-3 bg-[#EDDBD9]"
           >

@@ -119,7 +119,7 @@ export default function BuatPengaduan() {
         Layanan Pengaduan Online Masyarakat
       </h1>
 
-      <div data-aos="fade-up" className="border rounded-lg shadow-lg">
+      <div className="border rounded-lg shadow-lg">
         {/* Card Header */}
         <div className="p-4 bg-[#EDDBD9] border-b border-[#EDDBD9] flex items-center ">
           <svg className="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >

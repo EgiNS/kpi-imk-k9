@@ -11,7 +11,7 @@ const Pengawasan = () => {
       <div className="mt-6">
         <Breadcrumbs />
       </div>
-      <div data-aos="fade-up" className='p-6 shadow-md my-6 rounded-xl'>
+      <div className='p-6 shadow-md my-6 rounded-xl'>
         <h1 className="font-bold text-center text-[#420101] md:text-3xl text-2xl mb-6">Pengawasan Penyiaran</h1>
         <div className="leading-relaxed text-[#000000] text-justify mb-6">
           <p>Eksistensi KPI adalah bagian dari wujud peran serta masyarakat dalam hal penyiaran, baik sebagai wadah aspirasi maupun mewakili kepentingan masyarakat (UU Penyiaran, pasal 8 ayat 1). Legitimasi politik bagi posisi KPI dalam kehidupan kenegaraan berikutnya secara tegas diatur oleh UU Penyiaran sebagai lembaga negara independen yang mengatur hal-hal mengenai penyiaran (UU Penyiaran, pasal 7 ayat 2). Secara konseptual posisi ini mendudukkan KPI sebagai lembaga kuasi negara atau dalam istilah lain juga biasa dikenal dengan auxilarry state institution.</p><br />

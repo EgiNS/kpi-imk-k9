@@ -49,7 +49,6 @@ export default function EdaranComp() {
       </h1>
 
       <div
-      data-aos="fade-up"
         style={{
           margin: "auto",
           border: "1px solid #EDDBD9",

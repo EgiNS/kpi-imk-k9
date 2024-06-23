@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import Breadcrumbs from '../Breadcrumb';
-import Aos from 'aos';
 
 const struktur = () => {
     useEffect(() => {
@@ -12,7 +11,7 @@ const struktur = () => {
             <div className="mt-12">
                 <Breadcrumbs />
             </div>
-            <div data-aos="fade-up" className='p-6 pt-2 shadow-md my-6 rounded-xl'>
+            <div className='p-6 pt-2 shadow-md my-6 rounded-xl'>
                 <h1 className="font-bold text-center text-[#420101] md:text-3xl sm:text-2xl text-xl mb-6">Struktur Sekretariat</h1>
                 <div className="text-base leading-relaxed text-[#000000] text-justify">
                     <p>Perjuangan KPI Pusat untuk memperoleh Sekretariat akhirnya membuahkan hasil dengan dikeluarkannya Surat Keputusan Menteri Komunikasi dan Informasi No.  A/KEP/M.KOMINFO/1/2018 tentang organisasi dan tata kerja sekretariat Komisi Penyiaran Indonesia Pusat dengan tingkat eselon 2a. Hal ini memang tidak sesuai dengan permintaan KPI yang meminta eselon I untuk sekretariat KPI sesuai dengan beban tugas dan kewenangan KPI.</p>

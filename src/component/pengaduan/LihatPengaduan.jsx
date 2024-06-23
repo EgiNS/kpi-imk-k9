@@ -59,7 +59,7 @@ export default function LihatPengaduan() {
         Layanan Pengaduan Online Masyarakat
       </h1>
 
-      <div data-aos="fade-up" style={{ margin: 'auto', border: '1px solid #EDDBD9', borderRadius: '8px', overflow: 'hidden', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', marginBottom: '16px' }}>
+      <div style={{ margin: 'auto', border: '1px solid #EDDBD9', borderRadius: '8px', overflow: 'hidden', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)', marginBottom: '16px' }}>
         <div style={{ backgroundColor: '#EDDBD9', padding: '16px' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }} className='sm:text-base text-sm'>
             <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
