@@ -180,7 +180,7 @@ const Ikpstv = () => {
   return (
     <div className="bg-[#F9F9FB]">
       <NavBar />
-      <div className="pt-32 flex flex-col">
+      <div className="sm:pt-32 pt-16 flex flex-col">
       <div className="mt-5 md:px-14 px-5 flex justify-start">
                     <Breadcrumbs />
                 </div>

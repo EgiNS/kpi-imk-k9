@@ -39,7 +39,7 @@ export default function EdaranComp() {
   const pageCount = Math.ceil(filteredData.length / itemsPerPage);
 
   return (
-    <div style={{ textAlign: "center", marginBottom: "32px" }} className='lg:px-32 md:px-16 sm:px-12 px-8'>
+    <div style={{ textAlign: "center", marginBottom: "32px" }} className='lg:px-32 md:px-16 sm:px-12 px-3'>
       <div className="mt-12">
         <Breadcrumbs />
       </div>
@@ -123,7 +123,7 @@ export default function EdaranComp() {
             filteredData.length == 0 ?
             <p className="font-medium text-xl text-gray-700 mb-12 text-center">Edaran atau sanksi tidak ditemukan</p>
             :
-            <div>
+            <div className="overflow-x-auto">
                 <table
                     style={{
                     width: "100%",

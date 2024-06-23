@@ -61,7 +61,7 @@ export default function NavBar() {
 
   return (
     <nav className="bg-[#9D262A] fixed w-sceen z-[100]" ref={menuRef}>
-      <div className="flex items-center justify-between sm:h-24 h-14 sm:py-4 py-3 px-8 w-screen">
+      <div className="flex items-center justify-between sm:h-24 h-14 sm:py-4 py-3 sm:px-8 px-4 w-screen">
         <Link to="/">
           <img src={logo} alt="Logo" className="sm:h-16 h-9" />     
         </Link>
