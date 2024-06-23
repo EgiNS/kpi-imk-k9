@@ -19,7 +19,7 @@ const DetailKajian = () => {
     const [firstAuthor, ...otherAuthors] = paragraphs;
 
     return (
-      <div className='px-6'>
+      <div className=''>
         <div className="mt-12 mb-8">
                 <Breadcrumbs />
             </div>
@@ -30,19 +30,19 @@ const DetailKajian = () => {
             <p>Ditulis oleh {kajian.writer}</p>
             <p>Ditayangkan: {kajian.date}</p>
           </div>
-          <div className="flex mb-6 ml-8 mr-8">
+          <div className="flex md:flex-row flex-col mb-6 md:mx-8">
             <div className="flex-shrink-0">
               <img src={kajian.img} alt="Gambar Kegiatan" className="w-64" />
             </div>
-            <div className="ml-6 text-base leading-relaxed text-[#000000] text-justify">
+            <div className="md:ml-6 md:mt-0 mt-2 text-base leading-relaxed text-[#000000] text-justify">
               <p>Penulis: {firstAuthor}</p>
               {otherAuthors.map((author, index) => (
-                <p key={index} className="ml-16">{author}</p>
+                <p key={index} className="md:ml-16">{author}</p>
               ))}
-              <p className="mt-4">Deskripsi Fisik Buku: {kajian.deskripsi}</p>
-              <p className="mt-4">Tanggal Terbit Pertama: {kajian.publish}</p>
-              <p className="mt-4 font-bold">Sinopsis:</p>
-              <p className="mt-4">{kajian.sinopsis}</p>
+              <p className="md:mt-4">Deskripsi Fisik Buku: {kajian.deskripsi}</p>
+              <p className="md:mt-4">Tanggal Terbit Pertama: {kajian.publish}</p>
+              <p className="md:mt-4 font-bold">Sinopsis:</p>
+              <p className="md:mt-4">{kajian.sinopsis}</p>
             </div>
           </div>
         </div>

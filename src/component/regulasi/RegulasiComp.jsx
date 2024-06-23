@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { dataReg } from "./DataRegulasi";
+import Aos from "aos";
 
 const RegulasiComp = () => {
   const [activeTab, setActiveTab] = useState("Undang-Undang");

@@ -7,7 +7,7 @@ export default function Regulasi () {
     return (
         <div className="bg-[#F9F9FB]">
             <NavBar />
-            <div className="pt-24 lg:px-20 md:px-10 px-4">
+            <div className="sm:pt-24 pt-12 lg:px-20 md:px-10 px-4">
                 <div className="mt-12">
                     <Breadcrumbs />
                 </div>

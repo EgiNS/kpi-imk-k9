@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Footer from "../component/Footer.jsx";
 import Navbar from "../component/Navbar.jsx"
 import Berita from "../component/beranda/Berita.jsx";
@@ -11,7 +12,7 @@ export default function Beranda() {
   return (
     <div className="bg-[#F9F9FB]">
       <Navbar />
-      <div className="pt-24">
+      <div className="sm:pt-24 pt-14">
         <Hero />
         <div className="lg:px-20 md:px-10 px-4">
             <Layanan />

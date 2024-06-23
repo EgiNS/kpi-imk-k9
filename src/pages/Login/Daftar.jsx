@@ -5,7 +5,7 @@ export default function Daftar() {
   return (
     <div className="bg-[#F9F9FB]">
       <NavBar />
-      <div className="pt-32 pb-12 flex items-center justify-center">
+      <div className="sm:pt-32 pt-16 pb-12 flex items-center justify-center">
         <div className="w-5/6 bg-white rounded-lg border-2 border-[#EDDBD9]">
           <h2 className="text-2xl font-bold text-[#9D262A] text-center mb-4 bg-[#EDDBD9] py-4">
             DAFTAR

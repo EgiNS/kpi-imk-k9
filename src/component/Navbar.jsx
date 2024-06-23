@@ -61,9 +61,9 @@ export default function NavBar() {
 
   return (
     <nav className="bg-[#9D262A] fixed w-sceen z-[100]" ref={menuRef}>
-      <div className="flex items-center justify-between h-24 py-4 px-8 w-screen">
+      <div className="flex items-center justify-between sm:h-24 h-14 sm:py-4 py-3 px-8 w-screen">
         <Link to="/">
-          <img src={logo} alt="Logo" className="h-16" />     
+          <img src={logo} alt="Logo" className="sm:h-16 h-9" />     
         </Link>
         <div className="hidden min-[925px]:flex gap-x-3 items-center lg:text-base md:text-sm">
           <Link to="/" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer">
@@ -128,7 +128,7 @@ export default function NavBar() {
           <img
             src={user}
             alt="User Icon"
-            className="h-8 cursor-pointer"
+            className="sm:h-8 h-6 cursor-pointer"
             onClick={handleUserIconClick}
           />
           {dropdownVisible && (
@@ -153,7 +153,7 @@ export default function NavBar() {
             className="min-[925px]:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <img src={isMenuOpen ? close : hamburger} alt="Menu" className="h-8" />
+            <img src={isMenuOpen ? close : hamburger} alt="Menu" className="sm:h-8 h-6" />
           </button>
         </div>
       </div>
@@ -172,27 +172,14 @@ export default function NavBar() {
             </button>
             {openMenu === 1 && (
               <div className="w-full bg-[#F2EAEA] border-gray-200 border-b-2 shadow-lg z-10">
-                <Link to="#" className="text-sm block px-7 border-b-2 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
-                <Link to="#" className="text-sm block px-7 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
+                <Link to="/prosedur-perizinan" className="text-sm block px-7 border-b-2 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
+                <Link to="/pengawasan-penyiaran" className="text-sm block px-7 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
               </div>
             )}
           </div>
-          <div className="relative w-full">
-            <button
-              onClick={() => toggleSubMenu(2)}
-              className="bg-[#F2EAEA] border-b-2 px-4 py-3 cursor-pointer flex items-center justify-between w-full"
-            >
-              Regulasi
-              <img src={openMenu === 2 ? "/img/arrow_up.svg" : "/img/arrow_down.svg"} alt="" className='inline h-4 ml-2' />
-            </button>
-            {openMenu === 2 && (
-              <div className="w-full bg-[#F2EAEA] border-gray-200 shadow-lg z-10">
-                <Link to="#" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">Undang-Undang</Link>
-                <Link to="#" className="text-sm block border-b-2 px-7 py-2 hover:bg-gray-100">Peraturan KPI</Link>
-                <Link to="#" className="text-sm block px-7 py-2 hover:bg-gray-100">MoU</Link>
-              </div>
-            )}
-          </div>
+          <Link to="/regulasi" className="bg-[#F2EAEA] border-b-2 px-4 py-3 cursor-pointer w-full">
+            Regulasi
+          </Link>
           <div className="relative w-full">
             <button
               onClick={() => toggleSubMenu(3)}

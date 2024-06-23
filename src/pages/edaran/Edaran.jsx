@@ -6,7 +6,7 @@ export default function Edaran() {
     return (
         <div>
             <NavBar />
-                <div className="pt-24">
+                <div className="sm:pt-24 pt-12">
                     <EdaranComp />
                 </div>
             <Footer />

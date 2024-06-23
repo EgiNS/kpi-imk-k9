@@ -1,5 +1,5 @@
 // src/components/Login.js
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import swal from "sweetalert";
 import NavBar from "../../component/Navbar";
 import Footer from "../../component/Footer";
@@ -10,6 +10,10 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("")
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +40,7 @@ const Login = () => {
   return (
     <div className="bg-[#F9F9FB]">
       <NavBar />
-      <div className="pt-24 h-screen w-full flex items-center justify-center">
+      <div className="sm:pt-24 pt-14 h-screen w-full flex items-center justify-center">
         <div className="w-72 bg-white px-6 py-4 rounded-lg border-2 border-[#EDDBD9]">
             <h2 className="text-2xl font-bold text-[#9D262A] text-center mb-4">LOGIN</h2>
             <form onSubmit={handleSubmit}>

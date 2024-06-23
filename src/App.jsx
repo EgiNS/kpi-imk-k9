@@ -37,12 +37,9 @@ import SiaranPers from "./pages/siaranpers/SiaranPers";
 import DetailPers from "./pages/siaranpers/DetailPers";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { isMobile } from 'react-device-detect';
 
 function App() {
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
   return (
     <div>
       <BrowserRouter>
@@ -59,9 +56,9 @@ function App() {
           <Route path="/berita-KPID" element={ <BeritaKPID />}/>
           <Route path="/dinamika-penyiaran" element={ <Dinamika />}/>
           <Route path="/newsletter" element={ <Newslatter />}/>
-          <Route path="/visimisi" element={ <VisiMisi />}/>
-          <Route path="/dasarpembentukan" element={ <DasarPembentukan />}/>
-          <Route path="/struktursekretariat" element={ <StrukturSekretariat />}/>
+          <Route path="/visi-dan-misi" element={ <VisiMisi />}/>
+          <Route path="/dasar-pembentukan" element={ <DasarPembentukan />}/>
+          <Route path="/struktur-sekretariat" element={ <StrukturSekretariat />}/>
           <Route path="/apresiasi" element={ <Apresiasi /> }/>
           <Route path="/pengaduan" element={ <Pengaduan /> }/>
           <Route path="/pengaduan/buat-pengaduan" element={<BuatPengaduan />} />
@@ -76,7 +73,7 @@ function App() {
           <Route path="/kajian" element={ <Kajian />}/>
           <Route path="/kajian/:slug" element={ <FullKajian />}/>
           {/* <Route path="/struktur" element={ <Struktur /> }/> */}
-          <Route path="/profil" element={ <Profil /> }/>
+          <Route path="/profil-KPI" element={ <Profil /> }/>
           <Route path="/DIPA-KPI" element={ <DipaKPI /> }/>
           {/* <Route path="/sikst" element={ <SIKST /> }/> */}
           <Route path="/laporan-akhir-tahun" element={ <LaporanAT /> }/>

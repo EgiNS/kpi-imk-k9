@@ -19,7 +19,7 @@ const DetailKPID = () => {
     const firstParagraph = paragraphs.shift();
 
     return (
-        <div className='px-6'>
+        <div className=''>
             <div className="mt-12 mb-8">
                 <Breadcrumbs />
             </div>

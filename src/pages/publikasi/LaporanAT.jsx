@@ -18,7 +18,7 @@ export default function LaporanAT() {
   return (
     <>
       <Navbar />
-      <div className="pt-32 lg:px-20 md:px-10 px-5">
+      <div className="sm:pt-32 pt-20 lg:px-20 md:px-10 px-5">
         <div>
           <div className="mt-5 mb-2">
             <Breadcrumbs />

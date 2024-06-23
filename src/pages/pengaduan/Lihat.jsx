@@ -6,7 +6,7 @@ export default function Struktur() {
   return (
     <>
       <Navbar />
-      <div className="pt-24">
+      <div className="sm:pt-24 pt-12">
         <LihatPengaduan />
       </div>
       <Footer />

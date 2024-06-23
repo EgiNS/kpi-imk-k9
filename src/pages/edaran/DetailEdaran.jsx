@@ -17,7 +17,7 @@ const DetailEdaran = () => {
   return (
     <div>
         <NavBar />
-            <div className="pt-36 lg:px-20 md:px-10 px-5 pb-12">
+            <div className="sm:pt-36 pt-24 lg:px-20 md:px-10 px-5 pb-12">
                 {
                     edaran.tipe === "teguran" ?
                     <TeguranDetail edaran={edaran} /> : <EdaranDetail edaran={edaran} />

@@ -5,8 +5,8 @@ export default function ProsedurIzin() {
   return (
     <>
       <Navbar />
-      <div className="pt-24 bg-[#F9F9FB]">
-        <div className="lg:px-20 md:px-10 px-4">
+      <div className="sm:pt-24 pt-12 bg-[#F9F9FB]">
+        <div className="lg:px-20 md:px-10">
             <ProsedurPerizinan />
         </div>
         <Footer />

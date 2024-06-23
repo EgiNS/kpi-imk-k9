@@ -6,7 +6,7 @@ export default function SiaranPers() {
     return (
         <div>
             <NavBar />
-                <div className="pt-24">
+                <div className="sm:pt-24 pt-12">
                     <SiaranComp />
                 </div>
             <Footer />
