@@ -120,75 +120,82 @@ export default function SiaranComp() {
         </div>
 
         <div style={{ padding: "16px" }}>
-          <table
-            style={{
-              width: "100%",
-              borderCollapse: "collapse",
-              border: "1px solid #EDDBD9",
-            }}
-          >
-            <thead
-              style={{
-                borderBottom: "2px solid #EDDBD9",
-                backgroundColor: "#EDDBD9",
-              }}
-            >
-              <tr>
-                <th
-                  style={{ padding: "8px", borderRight: "1px solid #EDDBD9" }}
+          {
+            filteredData.length == 0 ?
+            <p className="font-medium text-xl text-gray-700 mb-12 text-center">Siaran pers tidak ditemukan</p>
+            :
+            <div>
+              <table
+                style={{
+                  width: "100%",
+                  borderCollapse: "collapse",
+                  border: "1px solid #EDDBD9",
+                }}
+              >
+                <thead
+                  style={{
+                    borderBottom: "2px solid #EDDBD9",
+                    backgroundColor: "#EDDBD9",
+                  }}
                 >
-                  Judul
-                </th>
-                <th style={{ padding: "8px" }}>Tanggal Ditayangkan</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentItems.map((edaran) => (
-                <tr key={edaran.id}>
-                  <td
-                    style={{
-                      padding: "8px",
-                      borderRight: "1px solid #EDDBD9",
-                      textAlign: "left",
-                    }}
-                  >
-                    <Link
-                      to={`/siaran-pers/${edaran.slug}`}
-                      className="hover:underline"
+                  <tr>
+                    <th
+                      style={{ padding: "8px", borderRight: "1px solid #EDDBD9" }}
                     >
-                      {edaran.judul}
-                    </Link>
-                  </td>
-                  <td style={{ padding: "8px", textAlign: "left" }}>
-                    {edaran.tanggal}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className='flex sm:justify-end justify-center mt-3'>
-            <ReactPaginate
-              previousLabel={"<"}
-              nextLabel={">"}
-              breakLabel={"..."}
-              breakClassName={"break-me"}
-              pageCount={pageCount}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={5}
-              onPageChange={handlePageClick}
-              containerClassName={"pagination flex justify-center list-none p-0"}
-              subContainerClassName={"pages pagination list-none"}
-              activeClassName={"active bg-[#CEABA5] text-white"}
-              pageClassName={"inline-block mx-1"}
-              pageLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              previousClassName={`inline-block mx-1 ${currentPage === 0 ? 'text-gray-400' : ''}`}
-              previousLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              nextClassName={`inline-block mx-1 ${currentPage === pageCount - 1 ? 'text-gray-400' : ''}`}
-              nextLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              forcePage={currentPage}
-              disableInitialCallback={true}
-            />
-          </div>
+                      Judul
+                    </th>
+                    <th style={{ padding: "8px" }}>Tanggal Ditayangkan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentItems.map((edaran) => (
+                    <tr key={edaran.id}>
+                      <td
+                        style={{
+                          padding: "8px",
+                          borderRight: "1px solid #EDDBD9",
+                          textAlign: "left",
+                        }}
+                      >
+                        <Link
+                          to={`/siaran-pers/${edaran.slug}`}
+                          className="hover:underline"
+                        >
+                          {edaran.judul}
+                        </Link>
+                      </td>
+                      <td style={{ padding: "8px", textAlign: "left" }}>
+                        {edaran.tanggal}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className='flex sm:justify-end justify-center mt-3'>
+                <ReactPaginate
+                  previousLabel={"<"}
+                  nextLabel={">"}
+                  breakLabel={"..."}
+                  breakClassName={"break-me"}
+                  pageCount={pageCount}
+                  marginPagesDisplayed={2}
+                  pageRangeDisplayed={5}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination flex justify-center list-none p-0"}
+                  subContainerClassName={"pages pagination list-none"}
+                  activeClassName={"active bg-[#CEABA5] text-white"}
+                  pageClassName={"inline-block mx-1"}
+                  pageLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  previousClassName={`inline-block mx-1 ${currentPage === 0 ? 'text-gray-400' : ''}`}
+                  previousLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  nextClassName={`inline-block mx-1 ${currentPage === pageCount - 1 ? 'text-gray-400' : ''}`}
+                  nextLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  forcePage={currentPage}
+                  disableInitialCallback={true}
+                />
+              </div>
+            </div>
+          }
         </div>
       </div>
     </div>

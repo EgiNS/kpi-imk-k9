@@ -92,54 +92,61 @@ export default function LihatPengaduan() {
         </div>
 
         <div style={{ padding: '16px' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #EDDBD9' }}>
-            <thead style={{ borderBottom: '2px solid #EDDBD9', backgroundColor: '#EDDBD9' }}>
-              <tr>
-                <th style={{ padding: '8px', borderRight: '1px solid #EDDBD9' }}>Pengirim</th>
-                <th style={{ padding: '8px' }}>Aduan</th>
-                <th style={{ padding: '8px' }}>Feedback</th>
-              </tr>
-            </thead>
-            <tbody>
-              {currentItems.map((data) => (
-                <tr key={data.id}>
-                  <td style={{ padding: '8px', borderRight: '1px solid #EDDBD9', textAlign: 'left' }}>{data.pengirim}</td>
-                  <td style={{ padding: '8px', textAlign: 'left' }}>{data.konten}</td>
-                  <td className="p-2 text-center">
-                    <button
-                      className="bg-[#9D262A] hover:bg-[#872e30] text-white px-3 py-1 rounded text-sm"
-                      onClick={() => handleOpenModal(data)}
-                    >
-                      Lihat
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className='flex sm:justify-end justify-center mt-3'>
-            <ReactPaginate
-              previousLabel={"<"}
-              nextLabel={">"}
-              breakLabel={"..."}
-              breakClassName={"break-me"}
-              pageCount={pageCount}
-              marginPagesDisplayed={2}
-              pageRangeDisplayed={5}
-              onPageChange={handlePageClick}
-              containerClassName={"pagination flex justify-center list-none p-0"}
-              subContainerClassName={"pages pagination list-none"}
-              activeClassName={"active bg-[#CEABA5] text-white"}
-              pageClassName={"inline-block mx-1"}
-              pageLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              previousClassName={`inline-block mx-1 ${currentPage === 0 ? 'text-gray-400' : ''}`}
-              previousLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              nextClassName={`inline-block mx-1 ${currentPage === pageCount - 1 ? 'text-gray-400' : ''}`}
-              nextLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
-              forcePage={currentPage}
-              disableInitialCallback={true}
-            />
-          </div>
+          {
+            filteredData.length == 0 ?
+            <p className="font-medium text-xl text-gray-700 mb-12 text-center">Aduan tidak ditemukan</p>
+            :
+            <div>
+              <table style={{ width: '100%', borderCollapse: 'collapse', border: '1px solid #EDDBD9' }}>
+                <thead style={{ borderBottom: '2px solid #EDDBD9', backgroundColor: '#EDDBD9' }}>
+                  <tr>
+                    <th style={{ padding: '8px', borderRight: '1px solid #EDDBD9' }}>Pengirim</th>
+                    <th style={{ padding: '8px' }}>Aduan</th>
+                    <th style={{ padding: '8px' }}>Feedback</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentItems.map((data) => (
+                    <tr key={data.id}>
+                      <td style={{ padding: '8px', borderRight: '1px solid #EDDBD9', textAlign: 'left' }}>{data.pengirim}</td>
+                      <td style={{ padding: '8px', textAlign: 'left' }}>{data.konten}</td>
+                      <td className="p-2 text-center">
+                        <button
+                          className="bg-[#9D262A] hover:bg-[#872e30] text-white px-3 py-1 rounded text-sm"
+                          onClick={() => handleOpenModal(data)}
+                        >
+                          Lihat
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className='flex sm:justify-end justify-center mt-3'>
+                <ReactPaginate
+                  previousLabel={"<"}
+                  nextLabel={">"}
+                  breakLabel={"..."}
+                  breakClassName={"break-me"}
+                  pageCount={pageCount}
+                  marginPagesDisplayed={2}
+                  pageRangeDisplayed={5}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination flex justify-center list-none p-0"}
+                  subContainerClassName={"pages pagination list-none"}
+                  activeClassName={"active bg-[#CEABA5] text-white"}
+                  pageClassName={"inline-block mx-1"}
+                  pageLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  previousClassName={`inline-block mx-1 ${currentPage === 0 ? 'text-gray-400' : ''}`}
+                  previousLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  nextClassName={`inline-block mx-1 ${currentPage === pageCount - 1 ? 'text-gray-400' : ''}`}
+                  nextLinkClassName={"px-3 py-1 border border-[#ccc] rounded text-[#333] bg-transparent"}
+                  forcePage={currentPage}
+                  disableInitialCallback={true}
+                />
+              </div>
+            </div>
+          }
         </div>
       </div>
 

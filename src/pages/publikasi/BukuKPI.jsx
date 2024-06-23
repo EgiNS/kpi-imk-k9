@@ -41,44 +41,49 @@ export default function BukuKPI() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center mb-10">
-          {filteredBerita.map((item) => (
-            <div
-              data-aos="fade-up"
-              key={item.id}
-              className="p-4 rounded-2xl shadow-md w-full flex flex-col items-center h-full"
-            >
-              <h3 className="text-lg font-semibold mb-2 text-center">
-                {item.title}
-              </h3>
-              <div className="flex-grow flex flex-col items-center justify-center mb-4 w-full">
-                <div
-                  className="relative bg-center object-cover rounded-lg"
-                  style={{
-                    height: "200px",
-                    width: "200px",
-                    backgroundImage: `url(${item.img})`,
-                  }}
-                ></div>
-              </div>
-              <a
-                href={item.link}
-                target="_blank"
-                className="bg-[#9D262A] cursor-pointer hover:bg-[#94383b] text-white px-3 py-1 rounded-md flex flex-row gap-x-2 items-center justify-center"
+        {
+          filteredBerita.length == 0 ?
+          <p className="font-medium text-xl text-gray-700 mb-12 text-center">Buku tidak ditemukan</p>
+          :
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center mb-10">
+            {filteredBerita.map((item) => (
+              <div
+                data-aos="fade-up"
+                key={item.id}
+                className="p-4 rounded-2xl shadow-md w-full flex flex-col items-center h-full"
               >
-                <svg
-                  width={14}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#ffffff"
-                  viewBox="0 0 512 512"
+                <h3 className="text-lg font-semibold mb-2 text-center">
+                  {item.title}
+                </h3>
+                <div className="flex-grow flex flex-col items-center justify-center mb-4 w-full">
+                  <div
+                    className="relative bg-center object-cover rounded-lg"
+                    style={{
+                      height: "200px",
+                      width: "200px",
+                      backgroundImage: `url(${item.img})`,
+                    }}
+                  ></div>
+                </div>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="bg-[#9D262A] cursor-pointer hover:bg-[#94383b] text-white px-3 py-1 rounded-md flex flex-row gap-x-2 items-center justify-center"
                 >
-                  <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
-                </svg>
-                <p>Unduh File</p>
-              </a>
-            </div>
-          ))}
-        </div>
+                  <svg
+                    width={14}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#ffffff"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
+                  </svg>
+                  <p>Unduh File</p>
+                </a>
+              </div>
+            ))}
+          </div>
+        }
       </div>
       <Footer />
     </>

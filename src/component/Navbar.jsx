@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from "react-router-dom";
+import swal from 'sweetalert';
 import logo from "/img/logo_kpi.png";
 import loginLogo from "/img/login.svg";
 import user from "/img/user 1.svg";
@@ -44,6 +45,18 @@ export default function NavBar() {
   const handleLogout = () => {
     sessionStorage.removeItem("isLoggedIn");
     setIsLoggedIn(false);
+    swal({
+      title: 'Sukses',
+      text: 'Logout Berhasil!',
+      icon: 'success',
+      buttons: {
+        confirm: {
+          text: 'OK',
+          value: true,
+          className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+        },
+      },
+    });
   };
 
   return (

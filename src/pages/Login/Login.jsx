@@ -1,5 +1,6 @@
 // src/components/Login.js
 import React, { useState } from "react";
+import swal from "sweetalert";
 import NavBar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import { Link, useNavigate } from "react-router-dom";
@@ -15,8 +16,20 @@ const Login = () => {
     if (username === "user" && password === "user") {
       sessionStorage.setItem("isLoggedIn", "true");
       navigate("/");
+      swal({
+        title: 'Sukses',
+        text: 'Login berhasil!',
+        icon: 'success',
+        buttons: {
+          confirm: {
+            text: 'OK',
+            value: true,
+            className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+          },
+        },
+      }); 
     } else {
-      setError("Invalid username or password");
+      setError("Username atau password salah!");
     }
   };
 

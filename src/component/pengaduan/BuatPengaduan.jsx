@@ -13,10 +13,53 @@ export default function BuatPengaduan() {
   const [pesanAduan, setPesanAduan] = useState('');
   const [filePendukung, setFilePendukung] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
+  const validateForm = () => {
+    let tempErrors = {};
+    let isValid = true;
+  
+    if (!kategori) {
+      tempErrors["kategori"] = "Kategori tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!klasifikasi) {
+      tempErrors["klasifikasi"] = "Klasifikasi tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!program) {
+      tempErrors["program"] = "Program tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!lembagaPenyiaran) {
+      tempErrors["lembagaPenyiaran"] = "Lembaga Penyiaran tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!tanggalTayang) {
+      tempErrors["tanggalTayang"] = "Tanggal Tayang tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!jamTayang) {
+      tempErrors["jamTayang"] = "Jam Tayang tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!pesanAduan) {
+      tempErrors["pesanAduan"] = "Pesan Aduan tidak boleh kosong!";
+      isValid = false;
+    }
+    if (!filePendukung) {
+      tempErrors["filePendukung"] = "File Pendukung tidak boleh kosong!";
+      isValid = false;
+    }
+  
+    setErrors(tempErrors);
+    return isValid;
+  };
+  
 
   const handleSubmit = () => {
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
@@ -35,20 +78,34 @@ export default function BuatPengaduan() {
         },
       });
     } else {
-      // Proceed with the form submission
-      setIsProcessing(true);
-      Swal({
-        title: 'Sukses',
-        text: 'Berhasil mengirim aduan!',
-        icon: 'success',
-        buttons: {
-          confirm: {
-            text: 'OK',
-            value: true,
-            className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+      if (validateForm()) {
+        setIsProcessing(true);
+        Swal({
+          title: 'Sukses',
+          text: 'Berhasil mengirim aduan!',
+          icon: 'success',
+          buttons: {
+            confirm: {
+              text: 'OK',
+              value: true,
+              className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+            },
           },
-        },
-      });
+        }); 
+      } else {
+        Swal({
+          title: 'Error',
+          text: 'Semua isian wajib diisi!',
+          icon: 'error',
+          buttons: {
+            confirm: {
+              text: 'OK',
+              value: true,
+              className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+            },
+          },
+        });
+      }
     }
   };
 
@@ -99,6 +156,7 @@ export default function BuatPengaduan() {
                 Radio
               </label>
             </div>
+            {errors.kategori && <span className="error text-red-500 text-xs">{errors.kategori}</span>}
           </div>
           
           <div className="mb-4">
@@ -113,6 +171,7 @@ export default function BuatPengaduan() {
               <option value="Lokal">Lokal</option>
               <option value="Nasional">Nasional</option>
             </select>
+            {errors.klasifikasi && <span className="error text-red-500 text-xs">{errors.klasifikasi}</span>}
           </div>
 
           <div className="mb-4">
@@ -142,6 +201,7 @@ export default function BuatPengaduan() {
               <option value="CNBN Indonesia">CNBN Indonesia</option>
               <option value="ANTV">ANTV</option>
             </select>
+            {errors.lembagaPenyiaran && <span className="error text-red-500 text-xs">{errors.lembagaPenyiaran}</span>}
           </div>
 
           <div className="mb-4">
@@ -181,6 +241,7 @@ export default function BuatPengaduan() {
               <option value="Tetangga Masa Gitu">Tetangga Masa Gitu</option>
               <option value="Tonight Show">Tonight Show</option>
             </select>
+            {errors.program && <span className="error text-red-500 text-xs">{errors.program}</span>}
           </div>
 
           <div className="mb-4 flex flex-row">
@@ -193,6 +254,7 @@ export default function BuatPengaduan() {
                 onChange={(e) => setTanggalTayang(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               />
+              {errors.tanggalTayang && <span className="error text-red-500 text-xs">{errors.tanggalTayang}</span>}
             </div>
             <div className="ml-2 w-1/2">
               <label className="block mb-2 font-medium" htmlFor="jamTayang">Jam Tayang</label>
@@ -203,6 +265,7 @@ export default function BuatPengaduan() {
                 onChange={(e) => setJamTayang(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               />
+              {errors.jamTayang && <span className="error text-red-500 text-xs">{errors.jamTayang}</span>}
             </div>
           </div>
 
@@ -216,6 +279,7 @@ export default function BuatPengaduan() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               rows="4"
             />
+            {errors.pesanAduan && <span className="error text-red-500 text-xs">{errors.pesanAduan}</span>}
           </div>
 
           <div className="mb-4">
@@ -227,6 +291,7 @@ export default function BuatPengaduan() {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
             />
             <p className="text-xs text-gray-500">* Format file mp4, mp3, pdf, jpg, jpeg, png, JPG, JPEG, PNG, dan ukuran maksimal 15 MB</p>
+            {errors.filePendukung && <span className="error text-red-500 text-xs">{errors.filePendukung}</span>}
           </div>
         </div>
 
