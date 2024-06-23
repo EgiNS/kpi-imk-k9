@@ -2,18 +2,19 @@
 import React, { useState } from "react";
 import NavBar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-const Login = ({ onLogin }) => {
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState("")
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username === "user" && password === "user") {
       sessionStorage.setItem("isLoggedIn", "true");
-      onLogin();
+      navigate("/");
     } else {
       setError("Invalid username or password");
     }
@@ -32,7 +33,7 @@ const Login = ({ onLogin }) => {
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        className="bg-[#F9F9FB] rounded-lg outline-1 w-full h-9 px-1"
+                        className="bg-[#F9F9FB] border-[#CEABA5] rounded-lg focus:outline-none focus:border-[#9D262A] focus:ring-1 focus:ring-[#9D262A] w-full h-9 px-1"
                     />
                 </div>
                 <div>
@@ -41,7 +42,7 @@ const Login = ({ onLogin }) => {
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="bg-[#F9F9FB] rounded-lg outline-1 w-full h-9 px-1"
+                        className="bg-[#F9F9FB] border-[#CEABA5] rounded-lg focus:outline-none focus:border-[#9D262A] focus:ring-1 focus:ring-[#9D262A] w-full h-9 px-1"
                     />
                 </div>
                 {error && <div className="text-red-500 text-sm">{error}</div>}

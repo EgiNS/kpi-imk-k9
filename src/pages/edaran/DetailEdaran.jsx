@@ -7,9 +7,8 @@ import TeguranDetail from '../../component/edaran/TeguranDetail.jsx';
 import EdaranDetail from '../../component/edaran/EdaranDetail.jsx';
 
 const DetailEdaran = () => {
-  const { id } = useParams();
-  console.log(id)
-  const edaran = EdaranData.find((item) => item.id === id);
+  const { slug } = useParams();
+  const edaran = EdaranData.find((item) => item.slug === slug);
 
   if (!edaran) {
     return <div className="container mx-auto mt-8">Data tidak ditemukan</div>;
@@ -18,7 +17,7 @@ const DetailEdaran = () => {
   return (
     <div>
         <NavBar />
-            <div className="pt-36 px-24 pb-12">
+            <div className="pt-36 lg:px-20 md:px-10 px-5 pb-12">
                 {
                     edaran.tipe === "teguran" ?
                     <TeguranDetail edaran={edaran} /> : <EdaranDetail edaran={edaran} />

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import EdaranData from "./EdaranData";
+import SiaranData from "./SiaranData";
 import ReactPaginate from "react-paginate";
 import Breadcrumbs from "../Breadcrumb";
 
-export default function EdaranComp() {
+export default function SiaranComp() {
   const [selectedAduan, setSelectedAduan] = useState({});
   const [itemsPerPage, setItemsPerPage] = useState(5);
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,7 +29,7 @@ export default function EdaranComp() {
     setCurrentPage(selected);
   };
 
-  const filteredData = EdaranData.filter(
+  const filteredData = SiaranData.filter(
     (item) =>
       item.judul.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -45,7 +45,7 @@ export default function EdaranComp() {
       </div>
 
       <h1 className="text-center md:text-3xl text-2xl text-[#420101] font-bold sm:mb-8 mb-4">
-        Edaran dan Sanksi
+        Siaran Pers
       </h1>
 
       <div
@@ -90,14 +90,14 @@ export default function EdaranComp() {
                 <option value="10">10</option>
                 <option value="15">15</option>
               </select>
-              <label htmlFor="jumlahAduan"> Edaran dan Sanksi</label>
+              <label htmlFor="jumlahAduan"> Siaran Pers</label>
             </div>
             <div
-              style={{ position: "relative"}} className="sm:w-72 w-full sm:mt-0 mt-4"
+              style={{ position: "relative"}} className='sm:w-72 w-full sm:mt-0 mt-4'
             >
               <input
                 type="text"
-                placeholder="Cari Edaran & Sanksi"
+                placeholder="Cari Siaran Pers"
                 className="px-1 py-1 border border-[#CEABA5] rounded-lg focus:outline-none focus:border-[#9D262A] focus:ring-1 focus:ring-[#9D262A]"
                 style={{ width: '100%', paddingRight: '24px', paddingLeft: '16px', fontSize: '14px' }}
                 value={searchTerm}
@@ -153,7 +153,7 @@ export default function EdaranComp() {
                     }}
                   >
                     <Link
-                      to={`/edaran-dan-sanksi/${edaran.slug}`}
+                      to={`/siaran-pers/${edaran.slug}`}
                       className="hover:underline"
                     >
                       {edaran.judul}

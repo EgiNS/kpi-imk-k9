@@ -6,9 +6,10 @@ import './CalendarAgenda.css'; // File CSS tambahan untuk custom styling
 const CalendarAgenda = () => {
   const [date, setDate] = useState(new Date());
   const agendas = [
-    { date: '2024-01-03', event: 'Survei Kepuasan terhadap Penyiaran Radio' },
-    { date: '2024-01-15', event: 'Penyiaran Eksklusif Pelantikan Presiden RI 2024-2029' },
-    { date: '2024-01-20', event: 'Monitoring dan Evaluasi Rutin' },
+    { date: '2024-06-13', event: 'Evaluasi Tahunan TV Nasional' },
+    { date: '2024-06-19', event: 'Survei Kepuasan terhadap Penyiaran Radio' },
+    { date: '2024-06-28', event: 'Sosialiasi Penyiaran Berkaitan Pilkada Serentak' },
+    { date: '2024-07-02', event: 'Monitoring dan Evaluasi Rutin' },
   ];
 
   const formatDate = (date) => {
@@ -32,7 +33,7 @@ const CalendarAgenda = () => {
   };
 
   return (
-    <div className="mx-auto mt-16 mb-20 flex sm:flex-row flex-col sm:space-x-11">
+    <div data-aos="fade-left" className="mx-auto mt-16 mb-20 flex sm:flex-row flex-col sm:space-x-11">
       <div className="sm:w-1/2 w-full">
         <Calendar
           onChange={setDate}

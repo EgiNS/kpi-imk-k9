@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DataKajian from './DataKajian';
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '../Breadcrumb';
 
 const DaftarKajian = () => {
 
 const [currentPage, setCurrentPage] = useState(1);
+const [searchTerm, setSearchTerm] = useState('');
 const itemsPerPage = 10;
-const totalPages = Math.ceil(DataKajian.length / itemsPerPage);
 
-const indexOfLastItem = currentPage * itemsPerPage;
-const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-const currentItems = DataKajian.slice(indexOfFirstItem, indexOfLastItem);
+useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-const handleNextPage = () => {
+const filteredBerita = DataKajian.filter(berita =>
+    berita.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredBerita.length / itemsPerPage);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredBerita.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handleNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
-};
+  };
 
-const handlePrevPage = () => {
+  const handlePrevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
@@ -26,15 +36,28 @@ const handlePrevPage = () => {
 
   return (
     <div className="mx-auto mt-8">
+        <div className="mt-12 mb-6">
+        <Breadcrumbs />
+      </div>
       <h1 className="font-bold text-[#420101] md:text-3xl text-2xl mb-6">Kajian</h1>
+      <div className="flex flex-row justify-center mb-7">
+        <input
+          type="text"
+          placeholder="Cari kajian.."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="sm:w-2/5 w-3/4 px-4 py-2 border border-[#CEABA5] rounded-l-lg focus:outline-none focus:border-[#9D262A] focus:ring-1 focus:ring-[#9D262A]"
+        />
+        <img src="/img/search.svg" alt="" className="bg-red-800 px-3 rounded-r-lg cursor-pointer" />
+      </div>
       <h3 className="font-medium text-[#000000] md:text-base text-base mb-4">
-        Menampilkan {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, DataKajian.length)} dari {DataKajian.length} Kajian </h3>
+        Menampilkan {indexOfFirstItem + 1}-{Math.min(indexOfLastItem, filteredBerita.length)} dari {filteredBerita.length} Kajian </h3>
         <div className="w-full grid md:grid-rows-1 md:grid-cols-5 sm:grid-cols-3 sm:grid-rows-2 min-[500px]:grid-rows-3 min-[500px]:grid-cols-2 gap-x-2">
-            {DataKajian.map((item) => (
+            {filteredBerita.map((item) => (
             <div key={item.id} className="p-4 rounded-2xl bg-white">
                 <img src={item.img} alt="" className="w-full cursor-pointer" />
                 <div>
-                    <Link to={`/kajian/${item.id}`} className="text-lg font-semibold hover:underline">{item.title}</Link>
+                    <Link to={`/kajian/${item.slug}`} className="text-lg font-semibold hover:underline">{item.title}</Link>
                     <p className="text-sm mt-3">{item.date}</p>
                 </div>
             </div>

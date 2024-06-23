@@ -7,7 +7,7 @@ const VideoGrid = () => {
   ];
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto" data-aos="zoom-in">
       <h2 className="md:text-3xl text-2xl font-bold mb-4 text-left text-[#611C1C]">Video KPI</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4">
         {/* Main Video */}

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import DataKajian from './DataKajian';
+import Breadcrumbs from '../Breadcrumb';
 
 const DetailKajian = () => {
-    const { id } = useParams();
-    const kajian = DataKajian.find(item => item.id === parseInt(id));
+    const { slug } = useParams();
+    const kajian = DataKajian.find(item => item.slug === slug);
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
     if (!kajian) {
         return <div>Informasi kajian tidak ditemukan</div>;
@@ -14,7 +19,11 @@ const DetailKajian = () => {
     const [firstAuthor, ...otherAuthors] = paragraphs;
 
     return (
-        <div className="mx-auto p-6 bg-white shadow-md mt-6">
+      <div className='px-6'>
+        <div className="mt-12 mb-8">
+                <Breadcrumbs />
+            </div>
+        <div className="mx-auto p-6 bg-white shadow-md my-6 rounded-xl">
           <h1 className="font-bold text-[#000000] md:text-3xl text-2xl mb-6 text-center">{kajian.title}</h1>
           <div className="mb-6 text-sm">
             <p className='font-bold'>Detail</p>
@@ -37,6 +46,7 @@ const DetailKajian = () => {
             </div>
           </div>
         </div>
+      </div>
       );
 };
 

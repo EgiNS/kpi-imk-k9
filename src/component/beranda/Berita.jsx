@@ -26,7 +26,7 @@ const Berita = () => {
         </div>
         {
           activeTab !== "Newsletter" ?
-          <BeritaNonNewsletter items={newsData[activeTab]} />
+          <BeritaNonNewsletter items={newsData[activeTab]} url={newsData[activeTab][0].url} />
           :
           <BeritaNewsletter items={newsData[activeTab]} />
         }

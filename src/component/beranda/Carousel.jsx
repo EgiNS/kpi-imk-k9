@@ -43,7 +43,7 @@ const Carousel = () => {
     };
   
     return (
-      <div className="relative w-3/4 max-w-5xl mx-auto">
+      <div data-aos="zoom-in" className="relative w-3/4 max-w-5xl mx-auto">
         <div className="flex items-center justify-center overflow-hidden py-10 pt-20">
           {getVisibleSlides().map((item, index) => (
             <div key={item.id}>
@@ -60,18 +60,22 @@ const Carousel = () => {
             </div>
           ))}
         </div>
-        <img 
+        {/* <img 
           src={prev} 
           alt="" 
           onClick={prevSlide}
           className="absolute cursor-pointer sm:h-14 h-10 top-1/2 lg:left-0 min-[450px]:-left-14 -left-10 transform -translate-y-1/2 bg-[#EDDBD9] rounded-full shadow"
-        />
-        <img 
-          src={next} 
-          alt="" 
-          onClick={nextSlide}
-          className="absolute cursor-pointer sm:h-14 h-10 top-1/2 lg:right-0 min-[450px]:-right-14 -right-10 transform -translate-y-1/2 bg-[#EDDBD9] rounded-full shadow"
-        />
+        /> */}
+        <div className='absolute cursor-pointer sm:h-14 sm:w-14 h-12 w-12 top-1/2 lg:left-0 min-[450px]:-left-14 -left-10 transform -translate-y-1/2 bg-[#f9f9fbbb] rounded-full shadow flex items-center justify-center' onClick={prevSlide}>
+          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path fill="#9d262a" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+          </svg>
+        </div>
+        <div className='absolute cursor-pointer sm:h-14 sm:w-14 h-12 w-12 top-1/2 lg:right-0 min-[450px]:-right-14 -right-10 transform -translate-y-1/2 bg-[#f9f9fbbb] rounded-full shadow flex items-center justify-center' onClick={nextSlide}>
+          <svg className='w-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path fill="#9d262a" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+          </svg>
+        </div>
         <div className="flex justify-center items-center space-x-2 mt-4">
           {items.map((_, index) => (
             <span

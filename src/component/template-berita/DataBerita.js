@@ -1,8 +1,16 @@
-// src/data/beritaData.js
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')  // Menghapus karakter khusus
+    .trim()
+    .replace(/\s+/g, '-');         // Mengganti spasi dengan strip
+};
+
 const DataBerita = [
     {
         id: 1,
         title: "Penuhi Undangan Google dan Youtube Asia Tenggara, KPI Dorong Pembangunan SDM Melalui Konten di Semua Platform",
+        slug: generateSlug("Penuhi Undangan Google dan Youtube Asia Tenggara, KPI Dorong Pembangunan SDM Melalui Konten di Semua Platform"),
         date: "10 Juni 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Juni/Youtube-Singapura-1.jpg",
@@ -15,6 +23,7 @@ const DataBerita = [
       {
         id: 2,
         title: "Evaluasi RTV: KPI Minta Kontribusi ILM untuk Edukasi Publik Bijak Bermedia Sosial",
+        slug: generateSlug("Evaluasi RTV: KPI Minta Kontribusi ILM untuk Edukasi Publik Bijak Bermedia Sosial"),
         date: "07 Juni 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Juni/WhatsApp-Image-2024-06-06-at-08.34.35-1.jpeg",
@@ -27,6 +36,7 @@ const DataBerita = [
       {
         id: 3,
         title: "Hadir di KPI Pusat, MCMC Kunjungi Sekolah P3SPS dan Pemantauan Langsung",
+        slug: generateSlug("Hadir di KPI Pusat, MCMC Kunjungi Sekolah P3SPS dan Pemantauan Langsung"),
         date: "07 Juni 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Juni/MCMC-3.jpg",
@@ -39,6 +49,7 @@ const DataBerita = [
       {
         id: 4,
         title: "(Bangun Ekosistem Ecobroadcasting) Ketua KPI Pusat: Kuatkan Narasi dan Perlindungan Jurnalis",
+        slug: generateSlug("(Bangun Ekosistem Ecobroadcasting) Ketua KPI Pusat: Kuatkan Narasi dan Perlindungan Jurnalis"),
         date: "06 Juni 2024",
         location: "Bandung",
         img: "https://kpi.go.id/images/2024/Juni/Tanam-Pohon-1.jpg",
@@ -51,6 +62,7 @@ const DataBerita = [
       {
         id: 5,
         title: "Gelar Sekolah P3SPS Angkatan Ke-51, KPI Tekankan Pentingnya Internalisasi Nilai Pancasila dalan Siaran",
+        slug: generateSlug("Gelar Sekolah P3SPS Angkatan Ke-51, KPI Tekankan Pentingnya Internalisasi Nilai Pancasila dalan Siaran"),
         date: "05 Juni 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Juni/Sekolah-P3SPS-1.jpg",
@@ -63,6 +75,7 @@ const DataBerita = [
       {
         id: 6,
         title: "KPI Gelar Evaluasi Tahunan 14 TV Berjaringan",
+        slug: generateSlug("Gelar Sekolah P3SPS Angkatan Ke-51, KPI Tekankan Pentingnya Internalisasi Nilai Pancasila dalan Siaran"),
         date: "03 Juni 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Juni/Evaluasi-2.jpg",
@@ -75,6 +88,7 @@ const DataBerita = [
     {
         id: 7,
         title: "Dukungan Masyarakat untuk Barometer Kualitas Siaran Indonesia",
+        slug: generateSlug("Dukungan Masyarakat untuk Barometer Kualitas Siaran Indonesia"),
         date: "20 Mei 2024",
         location: "Jambi",
         img: "https://kpi.go.id/images/2024/Mei/IKPSTV-Jambi-2.jpg",
@@ -87,6 +101,7 @@ const DataBerita = [
       {
         id: 8,
         title: "Pemuda Harus Terlibat Aktif Kembangkan Penyiaran",
+        slug: generateSlug('Pemuda Harus Terlibat Aktif Kembangkan Penyiaran'),
         date: "17 Mei 2024",
         location: "Semarang",
         img: "https://kpi.go.id/images/2024/Mei/FMPP-Smg-1.jpg",
@@ -99,6 +114,7 @@ const DataBerita = [
       {
         id: 9,
         title: "Pemuda Harus Terlibat Aktif Kembangkan Penyiaran",
+        slug: generateSlug('Pemuda Harus Terlibat Aktif Kembangkan Penyiaran'),
         date: "17 Mei 2024",
         location: "Semarang",
         img: "https://kpi.go.id/images/2024/Mei/FMPP-Smg-3.jpg",
@@ -111,6 +127,7 @@ const DataBerita = [
       {
         id: 10,
         title: "Pemenang Anugerah Syiar Ramadan 2024",
+        slug: generateSlug('Pemenang Anugerah Syiar Ramadan 2024'),
         date: "08 Mei 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Mei/ASR-2024-2.jpg",
@@ -123,6 +140,7 @@ const DataBerita = [
       {
         id: 11,
         title: "Wapres Tekankan Pentingnya Nilai dan Norma dalam Siaran Televisi",
+        slug: generateSlug('Wapres Tekankan Pentingnya Nilai dan Norma dalam Siaran Televisi'),
         date: "08 Mei 2024",
         location: "Jakarta",
         img: "https://kpi.go.id/images/2024/Mei/Wapres-di-ASR.jpg",

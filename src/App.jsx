@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Beranda from "./pages/Beranda";
@@ -32,44 +33,54 @@ import DipaKPI from "./pages/publikasi/DipaKPI";
 // import SIKST from "./pages/SIKST";
 import LaporanAT from "./pages/publikasi/LaporanAT";
 import BukuKPI from "./pages/publikasi/BukuKPI";
+import SiaranPers from "./pages/siaranpers/SiaranPers";
+import DetailPers from "./pages/siaranpers/DetailPers";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route index element={ <Beranda /> }/>
-          <Route path="/ikpstv" element={ <Ikpstv /> }/>
+          <Route path="/IKPSTV" element={ <Ikpstv /> }/>
           <Route path="/login" element={ <Login /> }/>
           <Route path="/daftar" element={ <Daftar /> }/>
           <Route path="/regulasi" element={ <Regulasi /> }/>
-          <Route path="/terkini/:id" element={ <FullBeritaTerkini />}/>
-          <Route path="/kpid/:id" element={ <FullBeritaKPID />}/>
-          <Route path="/dinamika/:id" element={ <NewsDinamika />}/>
-          <Route path="/terkini" element={ <BeritaTerkini />}/>
-          <Route path="/kpid" element={ <BeritaKPID />}/>
-          <Route path="/dinamika" element={ <Dinamika />}/>
+          <Route path="/berita-terkini/:slug" element={ <FullBeritaTerkini />}/>
+          <Route path="/berita-KPID/:slug" element={ <FullBeritaKPID />}/>
+          <Route path="/dinamika-penyiaran/:slug" element={ <NewsDinamika />}/>
+          <Route path="/berita-terkini" element={ <BeritaTerkini />}/>
+          <Route path="/berita-KPID" element={ <BeritaKPID />}/>
+          <Route path="/dinamika-penyiaran" element={ <Dinamika />}/>
           <Route path="/newsletter" element={ <Newslatter />}/>
           <Route path="/visimisi" element={ <VisiMisi />}/>
           <Route path="/dasarpembentukan" element={ <DasarPembentukan />}/>
           <Route path="/struktursekretariat" element={ <StrukturSekretariat />}/>
           <Route path="/apresiasi" element={ <Apresiasi /> }/>
           <Route path="/pengaduan" element={ <Pengaduan /> }/>
-          <Route path="/buat-pengaduan" element={<BuatPengaduan />} />
-          <Route path="/lihat-pengaduan" element={<LihatPengaduan />} />
-          <Route path="/lacak-pengaduan" element={<LacakPengaduan />} />
+          <Route path="/pengaduan/buat-pengaduan" element={<BuatPengaduan />} />
+          <Route path="/pengaduan/lihat-pengaduan" element={<LihatPengaduan />} />
+          <Route path="/pengaduan/lacak-pengaduan" element={<LacakPengaduan />} />
           <Route path="/prosedur-perizinan" element={<ProsedurPerizinan />}/>
           <Route path="/pengawasan-penyiaran" element={<PengawasanPenyiaran />}/>
           <Route path="/edaran-dan-sanksi" element={ <Edaran /> }/>
-          <Route path="/edaran-dan-sanksi/:id" element={ <DetailEdaran />} />
+          <Route path="/edaran-dan-sanksi/:slug" element={ <DetailEdaran />} />
+          <Route path="/siaran-pers" element={ <SiaranPers /> }/>
+          <Route path="/siaran-pers/:slug" element={ <DetailPers />} />
           <Route path="/kajian" element={ <Kajian />}/>
-          <Route path="/kajian/:id" element={ <FullKajian />}/>
+          <Route path="/kajian/:slug" element={ <FullKajian />}/>
           {/* <Route path="/struktur" element={ <Struktur /> }/> */}
           <Route path="/profil" element={ <Profil /> }/>
-          <Route path="/dipaKPI" element={ <DipaKPI /> }/>
+          <Route path="/DIPA-KPI" element={ <DipaKPI /> }/>
           {/* <Route path="/sikst" element={ <SIKST /> }/> */}
-          <Route path="/laporanakhir" element={ <LaporanAT /> }/>
-          <Route path="/bukuKPI" element={ <BukuKPI /> }/>
+          <Route path="/laporan-akhir-tahun" element={ <LaporanAT /> }/>
+          <Route path="/buku-KPI" element={ <BukuKPI /> }/>
         </Routes>
       </BrowserRouter>
     </div>

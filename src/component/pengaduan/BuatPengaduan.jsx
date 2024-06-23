@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert';
+import Breadcrumbs from '../Breadcrumb';
 
 export default function BuatPengaduan() {
   const [kategori, setKategori] = useState('');
@@ -9,14 +12,57 @@ export default function BuatPengaduan() {
   const [jamTayang, setJamTayang] = useState('');
   const [pesanAduan, setPesanAduan] = useState('');
   const [filePendukung, setFilePendukung] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleSubmit = () => {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn !== 'true') {
+      Swal({
+        title: 'Error',
+        text: 'Silakan login terlebih dahulu untuk mengirim aduan!',
+        icon: 'error',
+        buttons: {
+          confirm: {
+            text: 'OK',
+            value: true,
+            className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+          },
+        },
+      });
+    } else {
+      // Proceed with the form submission
+      setIsProcessing(true);
+      Swal({
+        title: 'Sukses',
+        text: 'Berhasil mengirim aduan!',
+        icon: 'success',
+        buttons: {
+          confirm: {
+            text: 'OK',
+            value: true,
+            className: 'bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+          },
+        },
+      });
+    }
+  };
 
   return (
-    <div className="max-w-3xl mx-auto mt-16 mb-16">
-      <h1 className="text-center md:text-3xl text-2xl text-[#420101] font-bold mt-16 mb-4">
+    <div className="mx-auto mt-12 mb-16 lg:px-20 md:px-10 px-5">
+      <div className="mt-10 mb-6">
+        <Breadcrumbs />
+      </div>
+
+      <h1 className="text-center md:text-3xl text-2xl text-[#420101] font-bold mb-4">
         Layanan Pengaduan Online Masyarakat
       </h1>
 
-      <div className="border rounded-lg shadow-lg">
+      <div data-aos="fade-up" className="border rounded-lg shadow-lg">
         {/* Card Header */}
         <div className="p-4 bg-[#EDDBD9] border-b border-[#EDDBD9] flex items-center ">
           <svg className="h-6 w-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
@@ -61,7 +107,7 @@ export default function BuatPengaduan() {
               id="klasifikasi"
               value={klasifikasi}
               onChange={(e) => setKlasifikasi(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
             >
               <option value="">Pilih</option>
               <option value="Lokal">Lokal</option>
@@ -75,7 +121,7 @@ export default function BuatPengaduan() {
               id="lembagaPenyiaran"
               value={lembagaPenyiaran}
               onChange={(e) => setLembagaPenyiaran(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
             >
               <option value="">Pilih</option>
               <option value="100,2 GEMAFM YESS">100,2 GEMAFM YESS</option>
@@ -104,7 +150,7 @@ export default function BuatPengaduan() {
               id="program"
               value={program}
               onChange={(e) => setProgram(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
             >
               <option value="">Pilih</option>
               <option value="Iklan Covid-19 versi vaksinasi">Iklan Covid-19 versi vaksinasi</option>
@@ -145,7 +191,7 @@ export default function BuatPengaduan() {
                 id="tanggalTayang"
                 value={tanggalTayang}
                 onChange={(e) => setTanggalTayang(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               />
             </div>
             <div className="ml-2 w-1/2">
@@ -155,7 +201,7 @@ export default function BuatPengaduan() {
                 id="jamTayang"
                 value={jamTayang}
                 onChange={(e) => setJamTayang(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               />
             </div>
           </div>
@@ -167,7 +213,7 @@ export default function BuatPengaduan() {
               value={pesanAduan}
               onChange={(e) => setPesanAduan(e.target.value)}
               placeholder="Ketik Uraian Pengaduan"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
               rows="4"
             />
           </div>
@@ -178,7 +224,7 @@ export default function BuatPengaduan() {
               type="file"
               id="filePendukung"
               onChange={(e) => setFilePendukung(e.target.files[0])}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#9D262A]"
             />
             <p className="text-xs text-gray-500">* Format file mp4, mp3, pdf, jpg, jpeg, png, JPG, JPEG, PNG, dan ukuran maksimal 15 MB</p>
           </div>
@@ -186,7 +232,7 @@ export default function BuatPengaduan() {
 
         {/* Card Footer */}
         <div className="p-4 bg-gray-100 border-t flex justify-end">
-          <button className="bg-[#9D262A] text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Proses</button>
+          <button className="bg-[#9D262A] text-white px-4 py-2 rounded-lg hover:bg-[#8d3336] focus:outline-none" onClick={handleSubmit}>Proses</button>
         </div>
       </div>
     </div>

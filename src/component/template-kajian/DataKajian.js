@@ -1,7 +1,16 @@
+const generateSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')  // Menghapus karakter khusus
+      .trim()
+      .replace(/\s+/g, '-');         // Mengganti spasi dengan strip
+  };
+
 export const DataKajian = [
     {
         id: 1,
         title: "Potret Kualitas Program Siaran Anak di Televisi Indonesia",
+        slug: generateSlug("Potret Kualitas Program Siaran Anak di Televisi Indonesia"),
         date: "09 Mei 2023",
         img: "https://kpi.go.id/images/2023/Juni/cover-buku-potret-siaran-anak---revisi-.jpg",
         writer: "IRA",
@@ -13,6 +22,7 @@ export const DataKajian = [
     {
         id: 2,
         title: "Potret Sinetron di Media Televisi Indonesia",
+        slug: generateSlug("Potret Sinetron di Media Televisi Indonesia"),
         date: "09 Mei 2023",
         img: "https://kpi.go.id/images/2023/Juni/cover-buku-potret-sinetron-kpi---REVISI-.jpg",
         writer: "IRA",
@@ -24,6 +34,7 @@ export const DataKajian = [
     {
         id: 3,
         title: "Potret Program Siaran Wisata dan Budaya di Indonesia",
+        slug: generateSlug("Potret Program Siaran Wisata dan Budaya di Indonesia"),
         date: "27 Desember 2022",
         img: "https://kpi.go.id/images/2022/Desember/Cover-Buku-Wisata-Budaya-Revisi001.jpg",
         writer: "IRA",
@@ -34,7 +45,8 @@ export const DataKajian = [
     },
     {
         id: 4,
-        title: "Perbincangan Bermakna di Layar Kaca: Potret Kualitas Program Talkshow di Televisi Indonesia",
+        title: "Potret Kualitas Program Talkshow di Televisi Indonesia",
+        slug: generateSlug("Potret Kualitas Program Talkshow di Televisi Indonesia"),
         date: "26 Desember 2022",
         img: "https://kpi.go.id/images/2022/Desember/Cover-Buku-Talkshow.jpg",
         writer: "IRA",
@@ -45,7 +57,8 @@ export const DataKajian = [
     },
     {
         id: 5,
-        title: "Religiositas Dari Layar Kaca (Potret Program Siaran Religi Di Televisi Indonesia)",
+        title: "Potret Program Siaran Religi Di Televisi Indonesia",
+        slug: generateSlug("Potret Program Siaran Religi Di Televisi Indonesia"),
         date: "15 Desember 2022",
         img: "https://kpi.go.id/images/2022/Desember/Religiositas-di-Layar-Kaca---low.jpg",
         writer: "IRA",
@@ -57,6 +70,7 @@ export const DataKajian = [
     {
         id: 6,
         title: "Potret Kualitas Siaran Televisi Program Berita di Indonesia",
+        slug: generateSlug("Potret Kualitas Siaran Televisi Program Berita di Indonesia"),
         date: "15 Desember 2022",
         img: "https://kpi.go.id/images/2022/Desember/Potret-Kualitas-Berita--low.jpg",
         writer: "IRA",

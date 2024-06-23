@@ -1,8 +1,16 @@
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')  // Menghapus karakter khusus
+    .trim()
+    .replace(/\s+/g, '-');         // Mengganti spasi dengan strip
+};
 
 const DataKPID = [
   {
     id: 1,
     title: "KPID Sumbar Gandeng Unand Bahas Ranperda Penyiaran",
+    slug: generateSlug("KPID Sumbar Gandeng Unand Bahas Ranperda Penyiaran"),
     date: "14 Juni 2024",
     location: "Padang",
     img: "https://kpi.go.id/images/2024/Juni/KPID-Sumbar-1.jpeg",
@@ -14,6 +22,7 @@ const DataKPID = [
   {
     id: 2,
     title: "Bupati Toba Berharap KPID Sumut Dorong Lembaga Penyiaran Masifkan Siaran Lokal",
+    slug: generateSlug("Bupati Toba Berharap KPID Sumut Dorong Lembaga Penyiaran Masifkan Siaran Lokal"),
     date: "13 Juni 2024",
     location: "Sibolga",
     img: "https://kpi.go.id/images/2024/Juni/KPID-Sumut-1.jpeg",
@@ -25,6 +34,7 @@ const DataKPID = [
   {
     id: 3,
     title: "Sambut Pilkada 2024, KPID Riau Minta Lembaga Penyiaran Aktif Sosialisasi",
+    slug: generateSlug("Sambut Pilkada 2024, KPID Riau Minta Lembaga Penyiaran Aktif Sosialisasi"),
     date: "12 Juni 2024",
     location: "Pekanbaru",
     img: "https://kpi.go.id/images/2024/Juni/KPID-Riau-1.jpg",
@@ -36,6 +46,7 @@ const DataKPID = [
   {
     id: 4,
     title: "Peringati Hari Penyiaran Tingkat Jabar, KPID Ingatkan Soal Moderasi Beragama",
+    slug: generateSlug("Peringati Hari Penyiaran Tingkat Jabar, KPID Ingatkan Soal Moderasi Beragama"),
     date: "20 Mei 2024",
     location: "Kadipaten",
     img: "https://kpi.go.id/images/2018/kpid.jpg",
@@ -48,6 +59,7 @@ const DataKPID = [
   {
     id: 5,
     title: "Lantik Anggota KPID Jambi Terpilih, Gubernur Harapkan Kinerja Positif",
+    slug: generateSlug("Lantik Anggota KPID Jambi Terpilih, Gubernur Harapkan Kinerja Positif"),
     date: "17 Mei 2024",
     location: "Jambi",
     img: "https://kpi.go.id/images/2024/Mei/KPID-Jambi-Terpilih.jpg",
