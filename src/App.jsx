@@ -35,8 +35,6 @@ import LaporanAT from "./pages/publikasi/LaporanAT";
 import BukuKPI from "./pages/publikasi/BukuKPI";
 import SiaranPers from "./pages/siaranpers/SiaranPers";
 import DetailPers from "./pages/siaranpers/DetailPers";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { isMobile } from 'react-device-detect';
 
 function App() {
