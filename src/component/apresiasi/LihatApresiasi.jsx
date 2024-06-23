@@ -48,6 +48,8 @@ export default function LihatApresiasi() {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
+    
     const isLoggedIn = sessionStorage.getItem('isLoggedIn');
 
     if (isLoggedIn !== 'true') {
@@ -64,7 +66,6 @@ export default function LihatApresiasi() {
         },
       });
     } else {
-      e.preventDefault();
 
       let newId = dataApresiasi[(dataApresiasi.length)-1].id;
       // Create new entry
