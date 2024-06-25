@@ -188,7 +188,7 @@ const Ikpstv = () => {
           Indeks Kualitas Program Siaran Televisi
         </h1>
         <div className="mt-2 w-full md:px-14 px-5">
-          <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 flex flex-col mb-10 gap-x-5">
+          <div className="lg:grid lg:grid-cols-2 lg:grid-rows-1 flex flex-col mb-10 gap-x-5 items-center">
             <div className="pr-5 border-1 border-[#828282] rounded-xl shadow-md p-4 lg:mb-0 mb-6">
               <p>
                 Indeks Kualitas Program Siaran Televisi (IKPSTV) adalah sebuah

@@ -1,18 +1,17 @@
 .carousel-item {
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;   
-  }
-  
-  .activeSlide {
-    transform: translateX(0) scale(1.2);
-    opacity: 1;
-  }
-  
-  .prevSlide {
-    transform: translateX(-100%) scale(0.8);
-    opacity: 0.75;
-  }
-  
-  .nextSlide {
-    transform: translateX(100%) scale(0.8);
-    opacity: 0.75;
-  }
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Reduce duration for smoother transition */
+}
+
+.activeSlide {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+.prevSlide, .nextSlide {
+  transform: translateX(-100%) scale(0.8);
+  opacity: 0.75;
+}
+
+.nextSlide {
+  transform: translateX(100%) scale(0.8);
+}

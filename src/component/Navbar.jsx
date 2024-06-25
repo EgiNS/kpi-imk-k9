@@ -6,8 +6,11 @@ import loginLogo from "/img/login.svg";
 import user from "/img/user 1.svg";
 import hamburger from "/img/hamburger.svg"; // sesuaikan dengan path ikon hamburger Anda
 import close from "/img/close.svg"; // sesuaikan dengan path ikon close Anda
+import loginHoverLogo from "/img/loginHoverLogo.svg";
 
 export default function NavBar() {
+  const [isHovered, setIsHovered] = useState(false);
+
   const [openMenu, setOpenMenu] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -66,59 +69,62 @@ export default function NavBar() {
           <img src={logo} alt="Logo" className="sm:h-16 h-9" />     
         </Link>
         <div className="hidden min-[925px]:flex gap-x-3 items-center lg:text-base md:text-sm">
-          <Link to="/" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer">
+          <Link to="/" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer relative">
             Beranda
           </Link>
           <div className="relative">
-            <button
-              onClick={() => toggleSubMenu(1)}
-              className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
-            >
-              Struktur Penyiaran
-              <img src={openMenu === 1 ? "/img/arrow_up.svg" : "/img/arrow_down.svg"} alt="" className='inline h-4 ml-2' />
-            </button>
-            {openMenu === 1 && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
-                <Link to="/prosedur-perizinan" className="text-sm block px-4 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
-                <Link to="/pengawasan-penyiaran" className="text-sm block px-4 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
+            <div className="group">
+              <button
+                className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
+              >
+                Struktur Penyiaran
+                <img src="/img/arrow_down.svg" alt="" className='inline h-4 ml-2' />
+              </button>
+              <div className='hidden group-hover:block absolute top-full left-0'>
+                <div className=" mt-1 w-48 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
+                  <Link to="/prosedur-perizinan" className="text-sm block px-4 py-2 hover:bg-gray-100">Prosedur Perizinan</Link>
+                  <Link to="/pengawasan-penyiaran" className="text-sm block px-4 py-2 hover:bg-gray-100">Pengawasan Penyiaran</Link>
+                </div>
               </div>
-            )}
+            </div>
           </div>
-          <Link to="/regulasi" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer">
+          <Link to="/regulasi" className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer relative">
             Regulasi
           </Link>
           <div className="relative">
-            <button
-              onClick={() => toggleSubMenu(3)}
-              className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
-            >
-              Publikasi
-              <img src={openMenu === 3 ? "/img/arrow_up.svg" : "/img/arrow_down.svg"} alt="" className='inline h-4 ml-2' />
-            </button>
-            {openMenu === 3 && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
+            <div className="group">
+              <button
+                className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
+              >
+                Publikasi
+                <img src="/img/arrow_down.svg" alt="" className='inline h-4 ml-2' />
+              </button>
+              <div className='hidden group-hover:block absolute top-full left-0'>
+                <div className=" mt-1 w-48 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
                 <Link to="/IKPSTV" className="text-sm block px-4 py-2 hover:bg-gray-100">Survei Indeks Kualitas Siaran Televisi</Link>
                 <Link to="/DIPA-KPI" className="text-sm block px-4 py-2 hover:bg-gray-100">DIPA KPI</Link>
                 <Link to="/laporan-akhir-tahun" className="text-sm block px-4 py-2 hover:bg-gray-100">Laporan Akhir Tahun</Link>
                 <Link to="/buku-KPI" className="text-sm block px-4 py-2 hover:bg-gray-100">Buku KPI</Link>
+                </div>
               </div>
-            )}
+            </div>
           </div>
           <div className="relative">
-            <button
-              onClick={() => toggleSubMenu(4)}
-              className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
-            >
-              Layanan Aplikasi
-              <img src={openMenu === 4 ? "/img/arrow_up.svg" : "/img/arrow_down.svg"} alt="" className='inline h-4 ml-2' />
-            </button>
-            {openMenu === 4 && (
-              <div className="absolute top-full left-0 mt-2 w-52 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
-                <a href='http://smiled.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">Data Lembaga Penyiaran</a>
-                <a href='http://ssj.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">Konten Siaran Lokal</a>
-                <a href='http://ppid.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">PPID</a>
+            <div className="group">
+                <button
+                  className="bg-[#F2EAEA] rounded-md px-4 py-3 cursor-pointer flex items-center"
+                >
+                  Layanan Aplikasi
+                  <img src="/img/arrow_down.svg" alt="" className='inline h-4 ml-2' />
+                </button>
+                <div className='hidden group-hover:block absolute top-full left-0'>
+                  <div className=" mt-1 w-48 bg-[#F2EAEA] border border-gray-200 rounded-md shadow-lg z-10">
+                  <a href='http://smiled.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">Data Lembaga Penyiaran</a>
+                  <a href='http://ssj.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">Konten Siaran Lokal</a>
+                  <a href='http://ppid.kpi.go.id/' target='_blank' className="text-sm block px-4 py-2 hover:bg-gray-100">PPID</a>
+                  </div>
+                </div>
               </div>
-            )}
           </div>
         </div>
         <div className='flex flex-row gap-x-5'>
@@ -150,8 +156,15 @@ export default function NavBar() {
           )}
         </div>
       ) : (
-        <Link to="/login">
-          <img src={loginLogo} alt="Login" className="sm:h-8 h-5" />
+        <Link
+          to="/login"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="flex items-center space-x-2 static"
+        >
+          <div className='w-8 min-[925px]:invisible min-[925px]:block hidden'></div>
+          {isHovered && <span className="min-[925px]:absolute min-[925px]:right-[86px] min-[925px]:block hidden text-sm sm:text-base transform duration-300 font-medium text-white ease-in-out">Login</span>}
+          <img src={isHovered ? loginHoverLogo : loginLogo} alt="Login" className="min-[925px]:absolute min-[925px]:right-10 sm:h-8 h-5 duration-300 ease-in-out transform" />
         </Link>
       )}
     </div>

@@ -11,7 +11,7 @@ const LineChart = ({ data }) => {
     labels: data.map(d => d.label),
     datasets: [
       {
-        label: 'Value',
+        label: 'IKPSTV',
         data: data.map(d => d.value),
         borderColor: '#9D262A',
         backgroundColor: '#9D262A',

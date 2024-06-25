@@ -24,16 +24,16 @@ export default function Footer() {
                     <div className="flex flex-col gap-y-4">
                         <p className="font-bold text-lg mt-3 mb-2">Media Sosial</p>
                         <div className="flex flex-row gap-x-5">
-                            <a target="_blank" href="https://www.facebook.com/KPIPusat/"><img src="/img/facebook.svg" alt="" className="h-11"/></a>
-                            <a target="_blank" href="http://twitter.com/KPI_Pusat"><img src="/img/x.svg" alt="" className="h-11"/></a>
-                            <a target="_blank" href="https://www.instagram.com/kpipusat/"><img src="/img/instagram.svg" alt="" className="h-11"/></a>   
+                            <a target="_blank" href="https://www.facebook.com/KPIPusat/"><img src="/img/facebook.svg" alt="" className="sm:h-11 h-9"/></a>
+                            <a target="_blank" href="http://twitter.com/KPI_Pusat"><img src="/img/x.svg" alt="" className="sm:h-11 h-9"/></a>
+                            <a target="_blank" href="https://www.instagram.com/kpipusat/"><img src="/img/instagram.svg" alt="" className="sm:h-11 h-9"/></a>   
                         </div>
                         <a href="https:/wa.me/6281213070000" target="_blank" className="flex flex-row items-center gap-x-3">
-                            <img src="/img/sms.svg" alt="" className="h-11"/>
+                            <img src="/img/sms.svg" alt="" className="sm:h-11 h-9"/>
                             <p>0812 130 70000</p>
                         </a>
                         <a href="mailto:layananpublik@kpi.go.id" className="flex flex-row items-center gap-x-3">
-                            <img src="/img/email.svg" alt="" className="h-11"/>
+                            <img src="/img/email.svg" alt="" className="sm:h-11 h-9"/>
                             <p>layananpublik@kpi.go.id</p>
                         </a>
                     </div>

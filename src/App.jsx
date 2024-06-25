@@ -35,9 +35,11 @@ import LaporanAT from "./pages/publikasi/LaporanAT";
 import BukuKPI from "./pages/publikasi/BukuKPI";
 import SiaranPers from "./pages/siaranpers/SiaranPers";
 import DetailPers from "./pages/siaranpers/DetailPers";
-import { isMobile } from 'react-device-detect';
+import ScrollToTop from "./component/ScrollToTop";
+import 'aos/dist/aos.css';
 
 function App() {
+
   return (
     <div>
       <BrowserRouter>
@@ -78,6 +80,7 @@ function App() {
           <Route path="/buku-KPI" element={ <BukuKPI /> }/>
         </Routes>
       </BrowserRouter>
+      <ScrollToTop />
     </div>
   );
 }

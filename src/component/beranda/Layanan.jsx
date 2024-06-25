@@ -5,7 +5,6 @@ import siaran from "/img/siaran.svg"
 import { Link } from "react-router-dom"
 
 export default function Layanan() {
-
     return (
         <div className="grid grid-rows-1 grid-cols-4 lg:px-24 md:px-16 cursor-pointer justify-center lg:gap-x-28 md:gap-x-16 gap-x-5 mt-6">
             <Link to="/apresiasi" className="flex flex-col items-center justify-center">
